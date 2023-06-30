@@ -1,5 +1,5 @@
 ---
-name: Wei Fan
+name: Wei-Fan Huang
 Email: whuang25@uh.edu
 photo: people/graduates/photo/Wei-Fan_Huang.jpg
 date: 2023-01-01
