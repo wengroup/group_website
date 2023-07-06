@@ -1,3 +1,6 @@
+# July 1, 2023
+Welcome Dr. Adhikari to join the group as a postdoc!
+
 # June 1, 2023
 
 Welcome, Heer and Bobby, as summer research undergraduates joining the group.
