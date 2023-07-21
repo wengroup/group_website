@@ -11,7 +11,7 @@ For steps 1 and 3, see the Dev Tools section in the [Group Manual](https://wengr
 
 ### 2. Add you info
 
-- In your fort, navigate to the corresponding folder in [content_data/people](./src/content_data/people/).
+- In your fork, navigate to the corresponding folder in [content_data/people](./src/content_data/people/).
 
 - Add your headshot image. Preferably, a 2 by 2 inches image with a PPI larger than 200.
 
