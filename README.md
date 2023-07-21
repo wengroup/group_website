@@ -23,7 +23,7 @@ For steps 1 and 3, see the Dev Tools section in the [Group Manual](https://wengr
   Email: <your email>
   photo: <path to your headshot image>
   date: <yyyy-mm-dd> # when you added this file
-  description: <A two sentences brief introduction of yourself>
+  description: <A brief introduction of yourself>
   ---
   ```
 
