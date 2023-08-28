@@ -5,7 +5,7 @@ Usage scenario:
 - host the source code in `group_website`
 - deploy the built site to `wengroup.github.io`
 
-We can either do it manually or use Github actions to automate it. See below.
+We can either do it manually or use GitHub actions to automate it. See below.
 
 ## Manually
 
