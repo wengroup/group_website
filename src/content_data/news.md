@@ -1,3 +1,6 @@
+# September 1, 2023
+Welcome Dr. Dai to join the group as a postdoc!
+
 # July 1, 2023
 Welcome Dr. Adhikari to join the group as a postdoc!
 
