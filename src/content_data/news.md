@@ -23,4 +23,4 @@ PhD students Wei-Fan, Emmanuel, and Dale join the group. Welcome!
 The group website _Materials Design with AI, Simulation, and Data_ is live now!
 
 # May 2, 2022
-Mingjian joins the Chemical and Biomolecular Engineering at the University of Houston as an Assistant Professor.
+In September, Mingjian will join the Chemical and Biomolecular Engineering at the University of Houston as an Assistant Professor!
