@@ -2,6 +2,9 @@
 Our paper on learning the elasticity tensor of materials appears on the cover of _Digital Discovery_. https://doi.org/10.1039/D3DD00233K
 
 # September 1, 2023
+Huge thanks to NSF for supporting our research on solid-state electrolytes for batteries! https://www.nsf.gov/awardsearch/showAward?AWD_ID=2316667
+
+# September 1, 2023
 Welcome Dr. Dai to join the group as a postdoc!
 
 # July 1, 2023
