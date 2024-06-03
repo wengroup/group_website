@@ -1,3 +1,6 @@
+# June 3, 2024
+Welcome summer research interns Abby, Catalina, and Lawrence to the group!
+
 # May 16, 2024
 Our paper on learning the elasticity tensor of materials appears on the cover of _Digital Discovery_. https://doi.org/10.1039/D3DD00233K
 
@@ -5,10 +8,10 @@ Our paper on learning the elasticity tensor of materials appears on the cover of
 Huge thanks to NSF for supporting our research on solid-state electrolytes for batteries! https://www.nsf.gov/awardsearch/showAward?AWD_ID=2316667
 
 # September 1, 2023
-Welcome Dr. Dai to join the group as a postdoc!
+Welcome Dr. Dai, who is joining the group as a postdoc!
 
 # July 1, 2023
-Welcome Dr. Adhikari to join the group as a postdoc!
+Welcome Dr. Adhikari, who is joining the group as a postdoc!
 
 # June 1, 2023
 Welcome, Heer and Bobby, as summer research undergraduates joining the group.
