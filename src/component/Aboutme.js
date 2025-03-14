@@ -24,7 +24,7 @@ export const Aboutme = () => {
     <article id="about" className="sm:col-span-2 pt-16">
       {/* this is the about me div */}
       <div>
-        <h2 className="text-center"></h2>  /*there used to be an `About` text; we've removed it*/
+        <h2 className="text-center"></h2>  /* there used to be an `About` text; we've removed it */
         <div className="flex flex-row justify-center mb-10"></div>
         <p>
           <div dangerouslySetInnerHTML={{ __html: about[0].html }} />
