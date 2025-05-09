@@ -31,6 +31,7 @@
     "gatsby-transformer-remark": "^5.12.1",
     "gatsby-transformer-sharp": "^4.12.1",
     "jsdom": "^22.1.0",
+    "lmdb": "^3.3.0",
     "postcss": "^8.4.12",
     "prismjs": "^1.28.0",
     "react": "^17.0.1",
