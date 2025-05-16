@@ -27,9 +27,9 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-8 px-8">
+      <div className="">
         <Aboutme />
-        <New news={newsArray} />
+        {/* <New news={newsArray} /> */}
       </div>
       <PeopleCards />
       <Research researches={researchData} />
