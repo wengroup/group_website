@@ -25,7 +25,7 @@ const PeopleCards = () => {
       <>
         <h2 className="text-center pt-20 mt-20 sm:mt-0">PEOPLE</h2>
         <div className="flex flex-row justify-center mb-10 ">
-          {data.file.childrenImageSharp === [] ? (
+          {data.file.childrenImageSharp == [] ? (
             <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
           ) : (
             <SubtitleIconSvg icon={data.file.publicURL} smaller />

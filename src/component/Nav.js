@@ -17,13 +17,11 @@ export const Nav = () => {
           <li className="mr-auto text-xl font-bold">WEN GROUP</li>
           <NavData />
           <Link to="/blogs">
-            <li className="uppercase hover:text-Hightlight pl-3 btn">blog</li>
+            <li className="uppercase pl-2 ">blog</li>
           </Link>
           {/* In the below line, should use `news` instead of `about`; hotfix to ensure jump to the top */}
           <AnchorLink to="/#position">
-            <li className="uppercase hover:text-Hightlight mr-7 btn">
-              openings
-            </li>
+            <li className="uppercase pl-2">openings</li>
           </AnchorLink>
         </ul>
         <button
