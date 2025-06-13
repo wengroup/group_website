@@ -17,33 +17,13 @@ const PeopleCardTest = ({ people, img, pi }) => {
   const data = useStaticQuery(query);
   return (
     <>
-      <div className="flex flex-col ">
-        <div className="flex flex-col sm:flex-row">
-          <div className="sm:mx-0  sm:pb-0 text-center">
-            {img.map((p) => {
-              if (p.relativePath === frontmatter.photo) {
-                return (
-                  <GatsbyImage
-                    image={p.childImageSharp.gatsbyImageData}
-                    alt={frontmatter.name}
-                    className="h-32 w-32 headshot sm:mr-4 "
-                  />
-                );
-              } else {
-                return null;
-              }
-            })}
-            {/* <GatsbyImage
-              image={photo.localFile.childImageSharp.gatsbyImageData}
-              alt={name}
-              className="h-32 w-32 headshot sm:mr-4 "
-            /> */}
-          </div>
-          <div className="text-sm self-center text-center sm:text-left">
-            <p className="text-lg font-semibold">{frontmatter.name}</p>
+      <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col ">
+          <div className="text-sm text-center sm:text-left">
+            <p className="text-lg font-semibold ">{frontmatter.name}</p>
             {pi && <p className="w-max">{frontmatter.title}</p>}
             {/* <p className="w-max">{title}</p> */}
-            <p className="text-slate-800">{frontmatter.Email}</p>
+            <p className="text-slate-800 ">{frontmatter.Email}</p>
             {/* <p>{website}</p> */}
 
             {pi && (
@@ -54,14 +34,28 @@ const PeopleCardTest = ({ people, img, pi }) => {
               </p>
             )}
           </div>
+          <p className="text-sm mt-5 ">
+            <ReactMarkdown
+              children={frontmatter.description}
+              className="markdown"
+            />
+          </p>
         </div>
-        <p className="text-sm mt-5">
-          <ReactMarkdown
-            children={frontmatter.description}
-            className="markdown"
-          />
-        </p>
-        {/* <p className="text-sm mt-5">{description}</p> */}
+        <div className="sm:mx-0  sm:pb-0 text-center">
+          {img.map((p) => {
+            if (p.relativePath === frontmatter.photo) {
+              return (
+                <GatsbyImage
+                  image={p.childImageSharp.gatsbyImageData}
+                  alt={frontmatter.name}
+                  className="h-32 w-32 headshot sm:mr-4 "
+                />
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
       </div>
     </>
   );

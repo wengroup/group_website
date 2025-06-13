@@ -24,13 +24,13 @@ const PeopleCards = () => {
     <div id="people">
       <>
         <h2 className="text-center pt-20 mt-20 sm:mt-0">PEOPLE</h2>
-        <div className="flex flex-row justify-center mb-10 ">
+        {/* <div className="flex flex-row justify-center mb-10 ">
           {data.file.childrenImageSharp == [] ? (
             <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
           ) : (
             <SubtitleIconSvg icon={data.file.publicURL} smaller />
           )}
-        </div>
+        </div> */}
       </>
       <div className="flex flex-col gap-8">
         <PiCards />

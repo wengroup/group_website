@@ -20,9 +20,7 @@ const query = graphql`
         id
       }
     }
-    allFile(
-      filter: { relativeDirectory: { eq: "people/postdocs/photo" } }
-    ) {
+    allFile(filter: { relativeDirectory: { eq: "people/postdocs/photo" } }) {
       nodes {
         relativePath
         extension
@@ -44,10 +42,8 @@ const PostdocsCards = () => {
   if (postdoc.length)
     return (
       <div>
-        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Postdocs
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+        <h2 className="text-center sm:text-left people-title">Postdocs</h2>
+        <div className="grid grid-cols-1 gap-10 pt-5 ">
           {postdoc.map((p) => {
             return (
               <div key={p.id}>

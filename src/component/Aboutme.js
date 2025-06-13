@@ -34,7 +34,7 @@ export const Aboutme = () => {
   } = data;
 
   return (
-    <article id="about" className="sm:col-span-2 bg-slate-600 w-screen">
+    <article id="about" className="sm:col-span-2 bg-slate-600">
       {/* this is the about me div */}
       <div className="flex flex-col md:flex-row items-start md:gap-36  p-40 gap-32">
         {/* <h2 className="text-center"></h2> */}
@@ -59,7 +59,7 @@ export const Aboutme = () => {
             <div dangerouslySetInnerHTML={{ __html: about[0].html }} />
           </p>
           <a
-            className="inline-block px-7 py-2 bg-white border border-[#c0c6ca] rounded-full text-[#2b495b] font-semibold tracking-wide hover:bg-[#c0c6ca] hover:text-[#2b495b] transition mb-4"
+            className="inline-block px-7 py-2 bg-white border border-[#c0c6ca] rounded-full text-[#2b495b] font-semibold tracking-wide hover:bg-[#c0c6ca] hover:text-[#2b495b] transition mt-10"
             href={data.file.publicURL}
           >
             DOWNLOAD CV

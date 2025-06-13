@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
     <div>
       <Nav />
       {/* <Header /> */}
-      <div className="max-w-6xl mx-auto page">{children}</div>
+      <div className=" mx-auto page">{children}</div>
       <div>
         <Footer />
       </div>
