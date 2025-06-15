@@ -21,9 +21,9 @@ const query = graphql`
 const PeopleCards = () => {
   const data = useStaticQuery(query);
   return (
-    <div id="people">
+    <div id="people" className="bg-slate-50 ">
       <>
-        <h2 className="text-center pt-20 mt-20 sm:mt-0 pb-10">PEOPLE</h2>
+        <h2 className="text-center mb-5 pt-20">PEOPLE</h2>
         {/* <div className="flex flex-row justify-center mb-10 ">
           {data.file.childrenImageSharp == [] ? (
             <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
@@ -32,7 +32,7 @@ const PeopleCards = () => {
           )}
         </div> */}
       </>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 pb-20">
         <PiCards />
         <PostdocsCards />
         <GraduatesCards />

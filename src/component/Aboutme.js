@@ -34,7 +34,7 @@ export const Aboutme = () => {
   } = data;
 
   return (
-    <article id="about" className="sm:col-span-2 bg-slate-600">
+    <article id="about" className="sm:col-span-2 h-screen pt-16">
       {/* this is the about me div */}
       <div className="flex flex-col md:flex-row items-start md:gap-36  p-40 gap-32">
         {/* <h2 className="text-center"></h2> */}
