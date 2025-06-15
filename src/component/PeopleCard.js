@@ -17,10 +17,10 @@ const PeopleCardTest = ({ people, img, pi }) => {
   const data = useStaticQuery(query);
   return (
     <>
-      <div className="flex flex-col sm:flex-row gap-20 w-2/3">
-        <div className="flex flex-col w-max">
+      <div className="flex flex-row  w-2/3">
+        <div className="flex flex-col w-max ">
           <div className="text-sm text-center sm:text-left">
-            <p className="text-lg font-semibold ">{frontmatter.name}</p>
+            <p className="text-base font-semibold ">{frontmatter.name}</p>
             {pi && <p className="w-max">{frontmatter.title}</p>}
             {/* <p className="w-max">{title}</p> */}
             <p className="text-slate-800 ">{frontmatter.Email}</p>
@@ -34,21 +34,21 @@ const PeopleCardTest = ({ people, img, pi }) => {
               </p>
             )}
           </div>
-          <p className="text-sm mt-2 ">
+          <p className="text-sm mt-2 w-4/5">
             <ReactMarkdown
               children={frontmatter.description}
               className="markdown"
             />
           </p>
         </div>
-        <div className="sm:mx-0  sm:pb-0 text-center flex items-center justify-center">
+        <div className="sm:mx-0  sm:pb-0 text-center flex justify-end flex-1 items-start">
           {img.map((p) => {
             if (p.relativePath === frontmatter.photo) {
               return (
                 <GatsbyImage
                   image={p.childImageSharp.gatsbyImageData}
                   alt={frontmatter.name}
-                  className="h-32 w-32 headshot sm:mr-4 "
+                  className="h-24 w-24 sm:mr-4 headshot"
                 />
               );
             } else {

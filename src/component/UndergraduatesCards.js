@@ -44,13 +44,19 @@ const UndergraduatesCards = () => {
   if (undergraduates.length)
     return (
       <div>
-        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Undergraduate Students
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+        <div className="flex items-center justify-center pt-9">
+          <h2 className="text-center sm:text-left people-title w-2/3">
+            Undergraduate Students
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 pt-3 gap-8">
           {undergraduates.map((undergraduate) => {
             return (
-              <div key={undergraduate.id}>
+              <div
+                key={undergraduate.id}
+                className="flex items-center justify-center"
+              >
                 {/* <PeopleCard people={graduate} /> */}
                 <PeopleCardTest people={undergraduate} img={photo} />
               </div>
