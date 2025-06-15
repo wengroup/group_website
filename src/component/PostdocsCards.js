@@ -48,7 +48,7 @@ const PostdocsCards = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 pt-3">
+        <div className="grid grid-cols-1 pt-3 gap-8">
           {postdoc.map((p) => {
             return (
               <div key={p.id} className="flex items-center justify-center">

@@ -34,7 +34,7 @@ const PeopleCardTest = ({ people, img, pi }) => {
               </p>
             )}
           </div>
-          <p className="text-sm mt-5 ">
+          <p className="text-sm mt-2 ">
             <ReactMarkdown
               children={frontmatter.description}
               className="markdown"
