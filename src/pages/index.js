@@ -29,7 +29,7 @@ const Home = ({ data }) => {
       <Seo />
       <div className="">
         <Aboutme />
-        {/* <New news={newsArray} /> */}
+        <New news={newsArray} />
       </div>
       <PeopleCards />
       <Research researches={researchData} />
