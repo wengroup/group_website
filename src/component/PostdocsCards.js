@@ -42,11 +42,16 @@ const PostdocsCards = () => {
   if (postdoc.length)
     return (
       <div>
-        <h2 className="text-center sm:text-left people-title">Postdocs</h2>
-        <div className="grid grid-cols-1 gap-10 pt-5 ">
+        <div className="flex items-center justify-center pt-9">
+          <h2 className="text-center sm:text-left people-title w-2/3">
+            Postdocs
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 pt-3">
           {postdoc.map((p) => {
             return (
-              <div key={p.id}>
+              <div key={p.id} className="flex items-center justify-center">
                 {/* <PeopleCard people={graduate} /> */}
                 <PeopleCardTest people={p} img={photo} />
               </div>

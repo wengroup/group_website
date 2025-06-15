@@ -42,7 +42,7 @@ const PiCards = () => {
   if (PI.length)
     return (
       <div className="flex flex-col">
-        <div className="flex items-center justify-center pb-5">
+        <div className="flex items-center justify-center pb-3">
           <h2 className="text-center sm:text-left people-title w-2/3">
             Principal Investigator
           </h2>
