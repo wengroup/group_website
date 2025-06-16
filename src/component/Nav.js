@@ -21,9 +21,9 @@ export const Nav = () => {
           </Link> */}
 
           {/* In the below line, should use `news` instead of `about`; hotfix to ensure jump to the top */}
-          <AnchorLink to="/#position">
+          {/* <AnchorLink to="/#position">
             <li className="uppercase pl-2">openings</li>
-          </AnchorLink>
+          </AnchorLink> */}
           <li className="pl-2">
             <a
               href="https://wengroup.github.io/group_manual"

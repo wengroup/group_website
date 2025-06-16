@@ -39,8 +39,8 @@ export const Publication = () => {
   const data = useStaticQuery(query);
 
   return (
-    <div className="pt-24" id="publications">
-      {/* <h2 className="text-center">PUBLICATIONS</h2> */}
+    <div className="mt-20 bg-slate-50 pb-20" id="publications">
+      <h2 className="text-center pt-20 pb-20">PUBLICATIONS</h2>
       {/* <div className="flex flex-row justify-center mb-10">
         {data.subTitle.childrenImageSharp == [] ? (
           <SubtitleIcon icon={data.subTitle.childrenImageSharp} smaller />
@@ -77,6 +77,10 @@ export const Publication = () => {
           {/* <p className="indent-2">ORCID</p> */}
         </a>
       </div>
+
+      <p className="w-full text-center pt-10 pl-32">
+        <a href="">Details...</a>
+      </p>
     </div>
   );
 };

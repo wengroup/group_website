@@ -9,6 +9,7 @@ export const navData = [
   "research",
   "codes",
   "publications",
+  "opentings",
 ];
 export const NavData = ({ side }) => {
   return (

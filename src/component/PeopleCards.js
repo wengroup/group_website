@@ -21,7 +21,7 @@ const query = graphql`
 const PeopleCards = () => {
   const data = useStaticQuery(query);
   return (
-    <div id="people" className="bg-slate-50 ">
+    <div id="people" className="bg-slate-50">
       <>
         <h2 className="text-center mb-20 pt-20">PEOPLE</h2>
         {/* <div className="flex flex-row justify-center mb-10 ">

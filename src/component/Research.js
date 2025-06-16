@@ -34,17 +34,18 @@ export const Research = ({ researches, showLink }) => {
     allFile: { nodes: imgs },
   } = data;
   return (
-    <div className="flex items-center justify-center flex-col mt-20">
+    <div className="flex items-center justify-center flex-col ">
       <article
         id="research"
         className="sm:w-4/5"
+
         // className={`${
         //   showLink
         //     ? "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
         //     : "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
         // }`}
       >
-        <h2 className="text-center mb-20">
+        <h2 className="text-center mb-20 pt-20">
           {showLink ? <Link to="Researches">RESEARCH</Link> : "RESEARCH"}
         </h2>
         {/* <div className="flex flex-row justify-center mb-10">
