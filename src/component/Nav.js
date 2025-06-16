@@ -12,17 +12,27 @@ export const Nav = () => {
   };
   return (
     <>
-      <div className="fixed top-0 w-full bg-gray-200 h-14 z-50">
+      <div className="fixed top-0 w-full bg-gray-300 h-14 z-50">
         <ul className="hidden sm:flex justify-end w-5/6 max-w-6xl items-center h-full gap-2 mx-auto pr-0">
           <li className="mr-auto text-xl font-bold">WEN GROUP</li>
           <NavData />
-          <Link to="/blogs">
+          {/* <Link to="/blogs">
             <li className="uppercase pl-2 ">blog</li>
-          </Link>
+          </Link> */}
+
           {/* In the below line, should use `news` instead of `about`; hotfix to ensure jump to the top */}
           <AnchorLink to="/#position">
             <li className="uppercase pl-2">openings</li>
           </AnchorLink>
+          <li className="pl-2">
+            <a
+              href="https://wengroup.github.io/group_manual"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              WIKI
+            </a>
+          </li>
         </ul>
         <button
           className="sm:hidden absolute right-3 top-4 text-3xl"
@@ -41,12 +51,22 @@ export const Nav = () => {
       >
         <ul>
           <NavData side />
-          <h1 className="px-3 side-nav flex flex-col">
+          {/* <h1 className="px-3 side-nav flex flex-col">
             <Link to="/blogs/">BLOG</Link>
-          </h1>
+          </h1> */}
+
           <h1 className="px-3 side-nav">
             <AnchorLink to="/#news">NEWS</AnchorLink>
           </h1>
+          <li className="side-nav flex flex-col px-3">
+            <a
+              href="https://wengroup.github.io/group_manual"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              WIKI
+            </a>
+          </li>
         </ul>
       </CSSTransition>
     </>

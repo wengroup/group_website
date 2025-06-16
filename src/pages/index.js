@@ -9,6 +9,7 @@ import PeopleCards from "../component/PeopleCards";
 import Seo from "../component/SEO";
 import { Position } from "../component/Position";
 import { convertHtmlToArray } from "../utils/convertHtmlToArray";
+import { Publication } from "../component/Publication";
 
 const Home = ({ data }) => {
   // const {
@@ -36,6 +37,7 @@ const Home = ({ data }) => {
       {/* <Research researches={researches} showLink /> */}
       <Code codes={codeData} />
       <Position positions={positionData} />
+      <Publication />
     </Layout>
   );
 };
