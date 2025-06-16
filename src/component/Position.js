@@ -18,15 +18,15 @@ const query = graphql`
 export const Position = ({ positions }) => {
   const data = useStaticQuery(query);
   return (
-    <div id="position" className="pt-12">
-      <h2 className=" text-center pt-8">OPENINGS</h2>
-      <div className="flex flex-row justify-center mb-10">
+    <div id="position" className="">
+      <h2 className=" text-center pt-20 pb-20">OPENINGS</h2>
+      {/* <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp == [] ? (
           <SubtitleIcon icon={data.file.childrenImageSharp} />
         ) : (
           <SubtitleIconSvg icon={data.file.publicURL} />
         )}
-      </div>
+      </div> */}
       <ul className="sm:w-128 flex mx-auto w-5/6 flex-col">
         {positions.map((p) => {
           return (

@@ -13,7 +13,7 @@ const ResearchCard = ({ item, imgs }) => {
           <div dangerouslySetInnerHTML={{ __html: item.html }} />
         </p>
       </div>
-      <div className=" w-1/3 items-center flex">
+      <div className=" w-1/2 items-center flex">
         {imgs.map((p) => {
           if (p.relativePath === item.frontmatter.img) {
             return (

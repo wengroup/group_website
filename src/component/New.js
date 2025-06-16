@@ -29,7 +29,7 @@ export const New = ({ news, showGrid }) => {
           <Link to="/News">
             {/* <GatsbyImage image={data.file.childrenImageSharp} alt="news" /> */}
             {/* <img src={data.file.publicURL} alt="news" /> */}
-            <h2 className="text-center mb-5 pt-20">NEWS</h2>
+            <h2 className="text-center mb-20 pt-20">NEWS</h2>
           </Link>
 
           {/* <div className={`${!showGrid && "overflow-scroll h-128 p-4"}`}> */}

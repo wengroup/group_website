@@ -44,7 +44,7 @@ export const Research = ({ researches, showLink }) => {
         //     : "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
         // }`}
       >
-        <h2 className="text-center mb-5">
+        <h2 className="text-center mb-20">
           {showLink ? <Link to="Researches">RESEARCH</Link> : "RESEARCH"}
         </h2>
         {/* <div className="flex flex-row justify-center mb-10">
