@@ -44,8 +44,8 @@ const UndergraduatesCards = () => {
   if (undergraduates.length)
     return (
       <div>
-        <div className="flex items-center justify-center pt-9">
-          <h2 className="text-center sm:text-left people-title w-2/3">
+        <div className="flex items-center justify-center pt-9 mt-10">
+          <h2 className="text-center sm:text-left people-title w-1/2 pb-10">
             Undergraduate Students
           </h2>
         </div>

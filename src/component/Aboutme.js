@@ -53,7 +53,7 @@ export const Aboutme = () => {
 
       <article id="about" className="sm:col-span-2 h-screen pt-16 relative">
         {/* this is the about me div */}
-        <div className="flex flex-col md:flex-row items-start md:gap-36  p-40 gap-32 ">
+        <div className="flex flex-col md:flex-row items-start md:gap-36 gap-5 md:p-40 p-8">
           {/* <h2 className="text-center"></h2> */}
           {/* there used to be an `About` text above; we've removed it */}
           <div className="flex flex-col items-center w-full md:w-auto">

@@ -34,10 +34,10 @@ export const Research = ({ researches, showLink }) => {
     allFile: { nodes: imgs },
   } = data;
   return (
-    <div className="flex items-center justify-center flex-col ">
+    <div className="flex items-center justify-center flex-col">
       <article
         id="research"
-        className="sm:w-4/5"
+        className="sm:w-4/5 "
 
         // className={`${
         //   showLink
