@@ -23,7 +23,7 @@ export const Code = ({ codes, showLink, showGrid }) => {
 
   return (
     <div id="codes" className=" mt-20  bg-slate-50 pt-20 pb-20">
-      <div className="">
+      <div className=" ">
         <h2 className="text-center pb-20">
           {showLink ? <Link to="Codes">CODES</Link> : "CODES"}
         </h2>
@@ -38,14 +38,14 @@ export const Code = ({ codes, showLink, showGrid }) => {
           className={`${
             showGrid
               ? "grid grid-cols-1 place-content-center w-full place-items-center gap-7 border"
-              : "px-60 grid grid-cols-1 sm:grid-cols-2 gap-16 "
+              : "px-10 grid grid-cols-1 sm:grid-cols-2 gap-16 sm:px-40 "
           }`}
         >
           {codes.map((item) => {
             return (
               <li
                 key={item.id}
-                className=" rounded-lg p-5 bg-slate-300  max-w-3xl"
+                className=" rounded-lg p-5 bg-slate-300  max-w-3xl w-full"
               >
                 <p className="subTitle">{item.frontmatter.title}</p>
                 <p>
