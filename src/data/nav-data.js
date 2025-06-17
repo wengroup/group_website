@@ -8,8 +8,8 @@ export const navData = [
   "people",
   "research",
   "codes",
-  "publications",
   "opentings",
+  "publications",
 ];
 export const NavData = ({ side }) => {
   return (
