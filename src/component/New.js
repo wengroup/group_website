@@ -81,7 +81,7 @@ export const New = ({ news, showGrid }) => {
       <Link to="/News" className="flex items-center justify-center">
         {/* <GatsbyImage image={data.file.childrenImageSharp} alt="news" /> */}
         {/* <img src={data.file.publicURL} alt="news" /> */}
-        <p className=" w-1/2 text-right pb-20">More...</p>
+        {!showGrid && <p className=" w-1/2 text-right pb-20">More...</p>}
       </Link>
     </div>
   );
