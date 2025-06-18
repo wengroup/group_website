@@ -18,7 +18,7 @@ const query = graphql`
 export const Position = ({ positions }) => {
   const data = useStaticQuery(query);
   return (
-    <div id="opentings" className="">
+    <div id="openings" className="">
       <h2 className=" text-center pt-20 pb-20">OPENINGS</h2>
       {/* <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp == [] ? (

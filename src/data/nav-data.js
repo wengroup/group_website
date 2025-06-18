@@ -8,17 +8,19 @@ export const navData = [
   "people",
   "research",
   "codes",
-  "opentings",
+  "openings",
   "publications",
 ];
 export const NavData = ({ side }) => {
   return (
     <>
       {navData.map((item, index) => (
-        <li key={index} className="uppercase">
+        <li key={index} className=" font-roboto capitalize">
           {item === "about" ? (
             <Link to="/">
-              <li className={`${side ? "side-nav indent-0" : "pl-2"}`}>
+              <li
+                className={`${side ? "side-nav indent-0 font-roboto" : "pl-2"}`}
+              >
                 {" "}
                 {item}
               </li>
@@ -26,7 +28,11 @@ export const NavData = ({ side }) => {
           ) : (
             <AnchorLink to={`/#${item}`}>
               <li
-                className={`${side ? "side-nav indent-0" : "pl-2 uppercase"}`}
+                className={`${
+                  side
+                    ? "side-nav indent-0 font-roboto capitalize"
+                    : "pl-2 font-roboto capitalize"
+                }`}
               >
                 {" "}
                 {item}

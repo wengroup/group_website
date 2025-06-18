@@ -24,7 +24,7 @@ export const Nav = () => {
           {/* <AnchorLink to="/#position">
             <li className="uppercase pl-2">openings</li>
           </AnchorLink> */}
-          <li className="pl-2">
+          <li className="pl-2 font-roboto">
             <a
               href="https://wengroup.github.io/group_manual"
               target="_blank"
@@ -55,9 +55,6 @@ export const Nav = () => {
             <Link to="/blogs/">BLOG</Link>
           </h1> */}
 
-          <h1 className="px-3 side-nav">
-            <AnchorLink to="/#news">NEWS</AnchorLink>
-          </h1>
           <li className="side-nav flex flex-col px-3">
             <a
               href="https://wengroup.github.io/group_manual"

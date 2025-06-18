@@ -3,11 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: source sans pro, sans-serif;
+    font-size: 16.17px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.65;
+    scroll-padding-top: 70px;
+  }
   body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1em;
-    color: hsl(209, 61%, 16%);
-    background-color: rgb(255 255 255);
+    font-weight: 300;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: inherit;
+    color: inherit;
+    background-color: #fff;
+    counter-reset: captions;
+    overflow-x: hidden;
   }
   .page {
     min-height: calc(100vh - 3.5rem - 15rem - 8rem);
@@ -72,8 +83,7 @@
     /* background: rgb(226 232 240); */
   }
   .side-nav {
-    text-transform: uppercase;
-    color: rgb(38 38 38);
+    /* color: rgb(38 38 38); */
     padding: 0.275rem 0.75rem;
     display: inline-block;
     font-weight: 700;
