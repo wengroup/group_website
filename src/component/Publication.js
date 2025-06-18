@@ -78,7 +78,7 @@ export const Publication = () => {
         </a>
       </div>
 
-      <p className="w-full text-center pt-10 pl-32">
+      <p className="w-full text-center pt-20 font-semibold text-slate-500">
         <a href="">Details...</a>
       </p>
     </div>

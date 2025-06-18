@@ -37,7 +37,7 @@ export const Position = ({ positions }) => {
               <p>
                 <ReactMarkdown
                   children={p.frontmatter.description}
-                  className="markdown"
+                  className="markdown text-xl"
                 />
               </p>
               {/* <p>{p.content}</p> */}

@@ -37,7 +37,7 @@ export const Research = ({ researches, showLink }) => {
     <div className="flex items-center justify-center flex-col">
       <article
         id="research"
-        className="sm:w-4/5 "
+        className="sm:w-3/4 "
 
         // className={`${
         //   showLink
@@ -55,7 +55,7 @@ export const Research = ({ researches, showLink }) => {
           <SubtitleIconSvg icon={data.file.publicURL} />
         )}
       </div> */}
-        <ul className="grid gap-5">
+        <ul className="grid gap-12">
           {researches.map((item) => {
             return <ResearchCard item={item} key={item.id} imgs={imgs} />;
           })}
