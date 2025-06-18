@@ -6,10 +6,9 @@ export const Footer = () => {
     <div className="h-32 w-ful footer ">
       <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
         <div>
-          <p className="font-light">Contact</p>
-          <p>4226 Martin Luther King Boulevard S222</p>
-          <p>Houston, TX 77204, USA</p>
-          <p>Email: mjwen@uh.edu</p>
+          <p className="font-medium">联系方式：</p>
+          <p>四川省成都市高新区（西区）西源大道2006号清水河校区</p>
+          <p>邮箱: mjwen@uh.edu</p>
         </div>
         <div>
           <p>
