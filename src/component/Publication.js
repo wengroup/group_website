@@ -40,7 +40,7 @@ export const Publication = () => {
 
   return (
     <div className="mt-20 bg-slate-50 pb-20" id="publications">
-      <h2 className="text-center pt-20 pb-20">PUBLICATIONS</h2>
+      <h2 className="text-center pt-20 pb-20">Publications</h2>
       {/* <div className="flex flex-row justify-center mb-10">
         {data.subTitle.childrenImageSharp == [] ? (
           <SubtitleIcon icon={data.subTitle.childrenImageSharp} smaller />

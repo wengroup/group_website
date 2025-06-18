@@ -30,17 +30,17 @@
   }
   h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: bold;
     letter-spacing: 0.1rem;
     color: hsl(209, 34%, 30%);
   }
   .people-title {
-    font-size: 1.2em;
+    font-size: 1.6em;
     letter-spacing: 0.05rem;
   }
   .subTitle {
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-indent: 0;
     /* font-family: "Oswald", sans-serif; */
     font-weight: 400;

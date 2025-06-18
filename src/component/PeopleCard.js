@@ -35,14 +35,16 @@ const PeopleCardTest = ({ people, img, pi }) => {
         </div>
         <div className="flex flex-col  ">
           <div className="text-sm text-center sm:text-left">
-            <p className="text-base font-semibold ">{frontmatter.name}</p>
-            {pi && <p className="w-max text-slate-500">{frontmatter.title}</p>}
+            <p className="text-lg font-semibold ">{frontmatter.name}</p>
+            {pi && (
+              <p className="w-max text-slate-500 mt-2">{frontmatter.title}</p>
+            )}
             {/* <p className="w-max">{title}</p> */}
-            <p className="text-slate-500 font-mono ">{frontmatter.Email}</p>
+            <p className="text-slate-500 font-mono mt-2">{frontmatter.Email}</p>
             {/* <p>{website}</p> */}
 
             {pi && (
-              <p className="markdown">
+              <p className="markdown mt-2">
                 <a href={data.file.publicURL} target="_blank">
                   CV
                 </a>
@@ -52,7 +54,7 @@ const PeopleCardTest = ({ people, img, pi }) => {
           <p className="text-sm mt-2">
             <ReactMarkdown
               children={frontmatter.description}
-              className="markdown"
+              className="markdown text-lg"
             />
           </p>
         </div>

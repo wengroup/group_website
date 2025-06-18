@@ -29,7 +29,7 @@ export const New = ({ news, showGrid }) => {
           <Link to="/News">
             {/* <GatsbyImage image={data.file.childrenImageSharp} alt="news" /> */}
             {/* <img src={data.file.publicURL} alt="news" /> */}
-            <h2 className="text-center mb-20 pt-20">NEWS</h2>
+            <h2 className="text-center mb-20 pt-20">News</h2>
           </Link>
 
           {/* <div className={`${!showGrid && "overflow-scroll h-128 p-4"}`}> */}
@@ -41,11 +41,13 @@ export const New = ({ news, showGrid }) => {
                     <ul className="mb-5" key={item.id}>
                       <li className="pb-5">
                         <div className="flex flex-row" id={item.id}>
-                          <p className="subTitle text-sm">{item.date}</p>
+                          <p className="subTitle text-lg italic">{item.date}</p>
                         </div>
                         <div
                           className={`${
-                            showGrid ? "mk mk-page markdown" : "mk markdown"
+                            showGrid
+                              ? "mk mk-page markdown"
+                              : "mk markdown font-semibold"
                           }`}
                         >
                           <ReactMarkdown children={item.content} />
@@ -59,11 +61,15 @@ export const New = ({ news, showGrid }) => {
                       <ul className="mb-5">
                         <li className="pb-5">
                           <div className="flex flex-row" id={item.id}>
-                            <p className="subTitle text-sm">{item.date}</p>
+                            <p className="subTitle text-lg italic">
+                              {item.date}
+                            </p>
                           </div>
                           <div
                             className={`${
-                              showGrid ? "mk mk-page markdown" : "mk markdown"
+                              showGrid
+                                ? "mk mk-page markdown"
+                                : "mk markdown font-medium text-xl text-black"
                             }`}
                           >
                             <ReactMarkdown children={item.content} />

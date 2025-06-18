@@ -25,7 +25,7 @@ export const Code = ({ codes, showLink, showGrid }) => {
     <div id="codes" className=" mt-20  bg-slate-50 pt-20 pb-20">
       <div className=" ">
         <h2 className="text-center pb-20">
-          {showLink ? <Link to="Codes">CODES</Link> : "CODES"}
+          {showLink ? <Link to="Codes">Codes</Link> : "CODES"}
         </h2>
         {/* <div className="flex flex-row justify-center pb-6 mb-10">
         {data.file.childrenImageSharp == [] ? (
