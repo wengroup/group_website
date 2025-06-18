@@ -10,12 +10,17 @@ export const Nav = () => {
   const sideMenue = () => {
     setToggleSideMenue(!toggleSideMenue);
   };
+  const [activeItem, setActiveItem] = useState(); // 默认选中 "about"
   return (
     <>
       <div className="fixed top-0 w-full bg-gray-300 h-14 z-50">
         <ul className="hidden sm:flex justify-end w-5/6 max-w-6xl items-center h-full gap-2 mx-auto pr-0">
           <li className="mr-auto text-xl font-bold">WEN GROUP</li>
-          <NavData />
+          <NavData
+            side={false}
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
+          />
           {/* <Link to="/blogs">
             <li className="uppercase pl-2 ">blog</li>
           </Link> */}
@@ -24,7 +29,7 @@ export const Nav = () => {
           {/* <AnchorLink to="/#position">
             <li className="uppercase pl-2">openings</li>
           </AnchorLink> */}
-          <li className="pl-2 font-roboto">
+          {/* <li className="pl-2 font-roboto">
             <a
               href="https://wengroup.github.io/group_manual"
               target="_blank"
@@ -32,7 +37,7 @@ export const Nav = () => {
             >
               WIKI
             </a>
-          </li>
+          </li> */}
         </ul>
         <button
           className="sm:hidden absolute right-3 top-4 text-3xl"
@@ -50,12 +55,16 @@ export const Nav = () => {
         }
       >
         <ul>
-          <NavData side />
+          <NavData
+            side={true}
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
+          />
           {/* <h1 className="px-3 side-nav flex flex-col">
             <Link to="/blogs/">BLOG</Link>
           </h1> */}
 
-          <li className="side-nav flex flex-col px-3">
+          {/* <li className="side-nav flex flex-col px-3">
             <a
               href="https://wengroup.github.io/group_manual"
               target="_blank"
@@ -63,7 +72,7 @@ export const Nav = () => {
             >
               WIKI
             </a>
-          </li>
+          </li> */}
         </ul>
       </CSSTransition>
     </>
