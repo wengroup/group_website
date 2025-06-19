@@ -88,7 +88,7 @@ export const New = ({ news, showGrid }) => {
         {/* <GatsbyImage image={data.file.childrenImageSharp} alt="news" /> */}
         {/* <img src={data.file.publicURL} alt="news" /> */}
         {!showGrid && (
-          <p className=" w-1/2 pb-20 text-slate-500 font-semibold text-xl">
+          <p className=" w-1/2 pb-20 text-gray-500 font-semibold text-xl">
             More...
           </p>
         )}
