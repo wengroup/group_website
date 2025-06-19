@@ -17,47 +17,51 @@ const PeopleCardTest = ({ people, img, pi }) => {
   const data = useStaticQuery(query);
   return (
     <>
-      <div className="flex flex-col gap-8 sm:flex-row sm:w-1/2 w-4/5 items-center">
-        <div className="sm:mx-0  sm:pb-0  flex  ">
-          {img.map((p) => {
-            if (p.relativePath === frontmatter.photo) {
-              return (
-                <GatsbyImage
-                  image={p.childImageSharp.gatsbyImageData}
-                  alt={frontmatter.name}
-                  className="h-24 w-24 sm:mr-4 headshot "
-                />
-              );
-            } else {
-              return null;
-            }
-          })}
-        </div>
-        <div className="flex flex-col  ">
-          <div className="text-sm text-center sm:text-left">
-            <p className="text-lg font-semibold ">{frontmatter.name}</p>
-            {pi && (
-              <p className="w-max text-slate-500 mt-2">{frontmatter.title}</p>
-            )}
+      <div className="flex flex-col ">
+        <div className="flex flex-col sm:flex-row">
+          <div className="sm:mx-0  sm:pb-0 text-center">
+            {img.map((p) => {
+              if (p.relativePath === frontmatter.photo) {
+                return (
+                  <GatsbyImage
+                    image={p.childImageSharp.gatsbyImageData}
+                    alt={frontmatter.name}
+                    className="h-32 w-32 headshot sm:mr-4 "
+                  />
+                );
+              } else {
+                return null;
+              }
+            })}
+            {/* <GatsbyImage
+              image={photo.localFile.childImageSharp.gatsbyImageData}
+              alt={name}
+              className="h-32 w-32 headshot sm:mr-4 "
+            /> */}
+          </div>
+          <div className="text-sm self-center text-center sm:text-left">
+            <p className="text-lg font-semibold">{frontmatter.name}</p>
+            {pi && <p className="w-max">{frontmatter.title}</p>}
             {/* <p className="w-max">{title}</p> */}
-            <p className="text-slate-500 font-mono mt-2">{frontmatter.Email}</p>
+            <p className="text-slate-800">{frontmatter.Email}</p>
             {/* <p>{website}</p> */}
 
             {pi && (
-              <p className="markdown mt-2">
+              <p className="markdown">
                 <a href={data.file.publicURL} target="_blank">
                   CV
                 </a>
               </p>
             )}
           </div>
-          <p className="text-sm mt-2">
-            <ReactMarkdown
-              children={frontmatter.description}
-              className="markdown text-lg"
-            />
-          </p>
         </div>
+        <p className="text-sm mt-5">
+          <ReactMarkdown
+            children={frontmatter.description}
+            className="markdown"
+          />
+        </p>
+        {/* <p className="text-sm mt-5">{description}</p> */}
       </div>
     </>
   );

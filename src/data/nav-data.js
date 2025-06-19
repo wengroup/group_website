@@ -9,8 +9,8 @@ export const navData = [
   "codes",
   "openings",
   "publications",
-
-  "WIKI",
+  "Blogs",
+  "Wiki",
 ];
 export const NavData = ({ side, activeItem, setActiveItem }) => {
   return (
@@ -27,7 +27,7 @@ export const NavData = ({ side, activeItem, setActiveItem }) => {
                 {item}
               </li>
             </Link>
-          ) : item === "WIKI" ? ( // 新增 WIKI 条件判断
+          ) : item === "WIKI" ? (
             <a
               href="https://wengroup.github.io/group_manual"
               target="_blank"
@@ -40,6 +40,10 @@ export const NavData = ({ side, activeItem, setActiveItem }) => {
             >
               WIKI
             </a>
+          ) : item === "Blogs" ? (
+            <Link to="/blogs">
+              <li className=" capitalize font-roboto pl-2 ">blogs</li>
+            </Link>
           ) : (
             <AnchorLink
               to={`/#${item}`}
