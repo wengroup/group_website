@@ -13,14 +13,17 @@ export const Nav = () => {
   const [activeItem, setActiveItem] = useState(); // 默认选中 "about"
   return (
     <>
-      <div className="fixed top-0 w-full bg-gray-300 h-14 z-50">
+      <div className="fixed top-0 w-full h-14 z-50 ">
         <ul className="hidden sm:flex justify-end w-5/6 max-w-6xl items-center h-full gap-2 mx-auto pr-0">
           <li className="mr-auto text-xl font-bold">WEN GROUP</li>
-          <NavData
-            side={false}
-            activeItem={activeItem}
-            setActiveItem={setActiveItem}
-          />
+          <div className="flex gap-3 font-medium">
+            <NavData
+              side={false}
+              activeItem={activeItem}
+              setActiveItem={setActiveItem}
+            />
+          </div>
+
           {/* <Link to="/blogs">
             <li className=" capitalize font-roboto pl-2 ">blogs</li>
           </Link> */}
