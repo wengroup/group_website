@@ -44,25 +44,21 @@ const UndergraduatesCards = () => {
   } = data;
   if (undergraduates.length)
     return (
-      <div className="border">
-        <div className="flex items-center justify-center pt-9 mt-10">
-          <h2 className="text-center sm:text-left people-title w-1/2 pb-10">
+      <div className="flex justify-center items-center">
+        <div className=" w-3/4">
+          <h2 className="text-center sm:text-left people-title sm:pl-11 ">
             Undergraduate Students
           </h2>
-        </div>
-
-        <div className="grid grid-cols-1 pt-3 gap-12">
-          {undergraduates.map((undergraduate) => {
-            return (
-              <div
-                key={undergraduate.id}
-                className="flex items-center justify-center"
-              >
-                {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={undergraduate} img={photo} />
-              </div>
-            );
-          })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+            {undergraduates.map((undergraduate) => {
+              return (
+                <div key={undergraduate.id}>
+                  {/* <PeopleCard people={graduate} /> */}
+                  <PeopleCardTest people={undergraduate} img={photo} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

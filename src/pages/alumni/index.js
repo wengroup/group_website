@@ -44,22 +44,22 @@ const Alumni = () => {
   if (alumni.length)
     return (
       <Layout>
-        <div>
-          <div className="flex items-center justify-center pt-9 mt-10">
-            <h2 className="text-center sm:text-left people-title w-1/2 pb-10">
-              Alumni
-            </h2>
-          </div>
+        <div className="flex justify-center items-center">
+          <div className=" w-3/4">
+            <div className="flex items-center justify-center pt-9 mt-10">
+              <h2 className="text-center  people-title w-1/2 pb-10">Alumni</h2>
+            </div>
 
-          <div className="grid grid-cols-1 pt-3 gap-12">
-            {alumni.map((p) => {
-              return (
-                <div key={p.id} className="flex items-center justify-center">
-                  {/* <PeopleCard people={graduate} /> */}
-                  <PeopleCardTest people={p} img={photo} />
-                </div>
-              );
-            })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+              {alumni.map((p) => {
+                return (
+                  <div key={p.id}>
+                    {/* <PeopleCard people={graduate} /> */}
+                    <PeopleCardTest people={p} img={photo} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </Layout>

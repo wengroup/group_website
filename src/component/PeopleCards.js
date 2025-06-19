@@ -38,7 +38,7 @@ const PeopleCards = () => {
         <PostdocsCards />
         <GraduatesCards />
         <UndergraduatesCards />
-        <Link to="/alumni" className="flex items-center justify-center">
+        <Link to="/alumni" className="flex items-center justify-center w-2/3">
           <p className=" w-1/2 pb-20 text-slate-500 font-semibold text-xl">
             Alumni...
           </p>
