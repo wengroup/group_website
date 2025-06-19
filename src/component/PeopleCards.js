@@ -6,6 +6,7 @@ import GraduatesCards from "./GraduatesCards";
 import PiCards from "./PiCards";
 import PostdocsCards from "./PostdocsCards";
 import UndergraduatesCards from "./UndergraduatesCards";
+import { Link } from "gatsby";
 const query = graphql`
   {
     file(name: { eq: "people" }) {
@@ -37,6 +38,11 @@ const PeopleCards = () => {
         <PostdocsCards />
         <GraduatesCards />
         <UndergraduatesCards />
+        <Link to="/alumni" className="flex items-center justify-center">
+          <p className=" w-1/2 pb-20 text-slate-500 font-semibold text-xl">
+            Alumni...
+          </p>
+        </Link>
       </div>
     </div>
   );

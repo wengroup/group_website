@@ -46,7 +46,7 @@ export const Research = ({ researches, showLink }) => {
         // }`}
       >
         <h2 className="text-center mb-20 pt-20">
-          {showLink ? <Link to="Researches">Research</Link> : "RESEARCH"}
+          {showLink ? <Link to="Researches">Research</Link> : "Research"}
         </h2>
         {/* <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp == [] ? (

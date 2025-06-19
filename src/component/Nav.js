@@ -21,9 +21,9 @@ export const Nav = () => {
             activeItem={activeItem}
             setActiveItem={setActiveItem}
           />
-          {/* <Link to="/blogs">
-            <li className="uppercase pl-2 ">blog</li>
-          </Link> */}
+          <Link to="/blogs">
+            <li className=" capitalize font-roboto pl-2 ">blogs</li>
+          </Link>
 
           {/* In the below line, should use `news` instead of `about`; hotfix to ensure jump to the top */}
           {/* <AnchorLink to="/#position">

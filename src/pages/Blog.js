@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 const query = graphql`
   {
     file(name: { eq: "people" }) {
@@ -10,13 +10,12 @@ const query = graphql`
       publicURL
     }
   }
-`
+`;
 
 const Blog = () => {
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(query);
 
-  console.log(data)
-  return <div>Blog</div>
-}
+  return <div>Blog</div>;
+};
 
-export default Blog
+export default Blog;

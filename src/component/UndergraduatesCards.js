@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import PeopleCardTest from "./PeopleCard";
+
 const query = graphql`
   {
     allMarkdownRemark(
@@ -43,14 +44,14 @@ const UndergraduatesCards = () => {
   } = data;
   if (undergraduates.length)
     return (
-      <div>
+      <div className="border">
         <div className="flex items-center justify-center pt-9 mt-10">
           <h2 className="text-center sm:text-left people-title w-1/2 pb-10">
             Undergraduate Students
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 pt-3 gap-8">
+        <div className="grid grid-cols-1 pt-3 gap-12">
           {undergraduates.map((undergraduate) => {
             return (
               <div

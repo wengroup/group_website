@@ -48,7 +48,7 @@ const GraduatesCards = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 pt-3 gap-8">
+        <div className="grid grid-cols-1 pt-3 gap-12">
           {graduates.map((p) => {
             return (
               <div key={p.id} className="flex items-center justify-center">

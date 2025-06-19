@@ -9,6 +9,7 @@ export const navData = [
   "codes",
   "openings",
   "publications",
+
   "WIKI",
 ];
 export const NavData = ({ side, activeItem, setActiveItem }) => {
