@@ -39,7 +39,7 @@ export const Publication = () => {
   const data = useStaticQuery(query);
 
   return (
-    <div className="mt-20 bg-slate-50 pb-20" id="publications">
+    <div className="mt-20 bg-gray-50 pb-20" id="publications">
       <h2 className="text-center pt-20 pb-20">Publications</h2>
       {/* <div className="flex flex-row justify-center mb-10">
         {data.subTitle.childrenImageSharp == [] ? (
@@ -78,8 +78,8 @@ export const Publication = () => {
         </a>
       </div>
 
-      <p className="w-full text-center pt-20 font-semibold text-slate-500">
-        <a href="">Details...</a>
+      <p className="w-full text-center pt-20 text-2xl font-medium text-gray-500">
+        <a href="">Full publication list...</a>
       </p>
     </div>
   );

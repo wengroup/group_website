@@ -42,16 +42,16 @@ export const Research = ({ researches, showLink }) => {
           : "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
       }`}
     >
-      <h2 className="text-center">
+      <h2 className="text-center pb-20">
         {showLink ? <Link to="Researches">Research</Link> : "Research"}
       </h2>
-      <div className="flex flex-row justify-center mb-10">
+      {/* <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp == [] ? (
           <SubtitleIcon icon={data.file.childrenImageSharp} />
         ) : (
           <SubtitleIconSvg icon={data.file.publicURL} />
         )}
-      </div>
+      </div> */}
       <ul className="grid gap-5">
         {researches.map((item) => {
           return <ResearchCard item={item} key={item.id} imgs={imgs} />;

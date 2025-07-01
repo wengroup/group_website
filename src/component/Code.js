@@ -22,7 +22,7 @@ export const Code = ({ codes, showLink, showGrid }) => {
   const data = useStaticQuery(query);
 
   return (
-    <div id="codes" className=" mt-20  bg-slate-50 pt-20 pb-20">
+    <div id="codes" className=" mt-20  bg-gray-50 pt-20 pb-20">
       <div className=" ">
         <h2 className="text-center pb-20">
           {showLink ? <Link to="Codes">Codes</Link> : "Codes"}
