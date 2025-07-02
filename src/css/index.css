@@ -147,10 +147,10 @@
     margin: 0 auto;
   }
   .markdown a {
-    color: #003f5c;
-    font-weight: 300;
+    color: #041291;
+    font-weight: 600;
     font-family: Open Sans;
-    font-size: 0.9em;
+    /* font-size: 1.1em; */
   }
   .markdown a:hover {
     text-decoration: underline;
