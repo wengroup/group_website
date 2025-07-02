@@ -1,20 +1,21 @@
-import React from "react"
-import Layout from "../component/Layout"
-import { graphql } from "gatsby"
-import { New } from "../component/New"
-import { convertHtmlToArray } from "../utils/convertHtmlToArray"
+import React from "react";
+import Layout from "../component/Layout";
+import { graphql } from "gatsby";
+import { New } from "../component/New";
+import { convertHtmlToArray } from "../utils/convertHtmlToArray";
 
 const News = ({ data }) => {
   const {
     allMarkdownRemark: { nodes: news },
-  } = data
-  const dataArray = convertHtmlToArray(news[0].html)
+  } = data;
+  const dataArray = convertHtmlToArray(news[0].html);
+  console.log(dataArray);
   return (
     <Layout>
       <New news={dataArray} showGrid />
     </Layout>
-  )
-}
+  );
+};
 export const query = graphql`
   {
     allMarkdownRemark(
@@ -26,5 +27,5 @@ export const query = graphql`
       }
     }
   }
-`
-export default News
+`;
+export default News;

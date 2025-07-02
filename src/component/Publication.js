@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { SubtitleIcon } from "./SubtitleIcon";
 import { SubtitleIconSvg } from "./SubtitleIconSvg";
+import { Link } from "gatsby";
 const query = graphql`
   {
     subTitle: file(name: { eq: "publication" }) {
@@ -79,7 +80,10 @@ export const Publication = () => {
       </div>
 
       <p className="w-full text-center pt-20 text-2xl font-medium text-gray-500">
-        <a href="">Full publication list...</a>
+        {/* <a href="">Full publication list...</a> */}
+        <Link to="/publications">
+          <p>Full publication list...</p>
+        </Link>
       </p>
     </div>
   );

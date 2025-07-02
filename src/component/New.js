@@ -19,6 +19,7 @@ const query = graphql`
 
 export const New = ({ news, showGrid }) => {
   const data = useStaticQuery(query);
+
   return (
     <div>
       <div className="flex items-center justify-center">
