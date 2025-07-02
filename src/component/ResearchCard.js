@@ -8,7 +8,7 @@ const ResearchCard = ({ item, imgs }) => {
         {item.frontmatter.title}
       </p>
 
-      <p className="pb-4">
+      <p className="pb-4 text-lg">
         <div dangerouslySetInnerHTML={{ __html: item.html }} />
       </p>
       <div className="">
