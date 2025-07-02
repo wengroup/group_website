@@ -45,13 +45,14 @@ export const Code = ({ codes, showLink, showGrid }) => {
             return (
               <li
                 key={item.id}
-                className=" rounded-lg p-5 bg-slate-300  max-w-3xl w-full"
+                className=" rounded-xl p-6 max-w-3xl w-full bg-white border border-gray-100 
+              shadow-[0_4px_20px_-2px_rgba(124,58,237,0.1)] "
               >
                 <p className="subTitle">{item.frontmatter.title}</p>
                 <p>
                   <ReactMarkdown
                     children={item.frontmatter.description}
-                    className="markdown"
+                    className="markdown text-xl"
                   />
                 </p>
                 {/* <p>{item.content}</p> */}
@@ -63,13 +64,13 @@ export const Code = ({ codes, showLink, showGrid }) => {
                   <FaGithubSquare />
                   <p className="pl-3 ">GitHub</p>
                 </a>
-                <a
+                {/* <a
                   href={item.frontmatter.document}
                   className="pt-2 flex items-center hover:underline hover:text-Button"
                 >
                   <GrDocument />
                   <p className="pl-3 ">Documentation</p>
-                </a>
+                </a> */}
               </li>
             );
           })}

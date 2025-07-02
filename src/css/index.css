@@ -4,8 +4,8 @@
 
 @layer base {
   html {
-    font-family: source sans pro, sans-serif;
-    font-size: 16.17px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9em;
     color: rgba(0, 0, 0, 0.8);
     line-height: 1.65;
     scroll-padding-top: 70px;
@@ -19,6 +19,10 @@
     background-color: #fff;
     counter-reset: captions;
     overflow-x: hidden;
+  }
+  .about {
+    font-family: source sans pro, sans-serif;
+    font-size: 1.1em;
   }
   .page {
     min-height: calc(100vh - 8rem);
@@ -42,17 +46,19 @@
   .subTitle {
     font-size: 1.5em;
     text-indent: 0;
+    color: #151515;
     /* font-family: "Oswald", sans-serif; */
-    font-weight: 400;
+    font-weight: 500;
   }
   .hero-title {
     /* font-family: Menlo; */
     font-size: 1em;
-    color: hsl(209, 61%, 16%);
+    color: #151515;
   }
   .hero-subtitle {
     font-family: "Roboto", sans-serif;
     font-size: 1.2em;
+    color: #151515;
   }
   .footer {
     font-family: "Source Sans Pro", sans-serif;
@@ -141,7 +147,10 @@
     margin: 0 auto;
   }
   .markdown a {
-    color: #51a0d5;
+    color: #003f5c;
+    font-weight: 300;
+    font-family: Open Sans;
+    font-size: 0.9em;
   }
   .markdown a:hover {
     text-decoration: underline;

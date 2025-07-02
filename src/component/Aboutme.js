@@ -72,7 +72,7 @@ export const Aboutme = () => {
           </div>
 
           <div className="flex-1 text-xl">
-            <p>
+            <p className="about">
               <div dangerouslySetInnerHTML={{ __html: about[0].html }} />
             </p>
             {/* <a
