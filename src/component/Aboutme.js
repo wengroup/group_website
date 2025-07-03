@@ -2,6 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Publication } from "./Publication";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { useEffect, useState } from "react";
+
 const query = graphql`
   {
     allMarkdownRemark(
@@ -37,17 +39,24 @@ const query = graphql`
 
 export const Aboutme = () => {
   const data = useStaticQuery(query);
+  const [zoomed, setZoomed] = useState(false);
+
   const {
     allMarkdownRemark: { nodes: about },
   } = data;
+  useEffect(() => {
+    setZoomed(true); // 组件加载后触发放大效果
+  }, []);
 
   return (
-    <div className="border-red-700 border w-full">
-      <div className="absolute inset-0 -z-10 overflow-hidden border-red-500">
+    <div className=" w-full">
+      <div className="absolute inset-0 -z-10 overflow-hidden ">
         <GatsbyImage
           image={data.hero.childrenImageSharp[0].gatsbyImageData}
           alt="wengroup"
-          className="object-cover w-full h-full opacity-50 block mx-auto "
+          className={`object-cover w-full h-full opacity-50 block mx-auto transition-transform duration-1000 ease-out ${
+            zoomed ? "scale-110" : "scale-100"
+          }`}
         />
       </div>
 
