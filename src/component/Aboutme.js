@@ -53,10 +53,15 @@ export const Aboutme = () => {
 
       <article
         id="about"
-        className="sm:col-span-2 h-screen pt-14 relative flex justify-center items-center"
+        className="sm:col-span-2 h-screen relative flex items-center ml-80 px-36"
       >
         {/* this is the about me div */}
-        <div className=" flex flex-col md:flex-row md:gap-36 gap-5 justify-between md:py-40 py-8 w-3/4 text-center">
+        <div
+          className=" flex flex-col md:flex-row md:gap-36 gap-5  py-8 
+        
+        
+        "
+        >
           {/* <div className="flex flex-col items-center md:w-auto">
             <div className=" w-40 h-40 md:w-60 md:h-60 flex-shrink-0 ">
               <GatsbyImage
@@ -67,7 +72,7 @@ export const Aboutme = () => {
             </div>
           </div> */}
 
-          <div className=" text-xl ">
+          <div className=" text-xl -mt-28">
             <p className="about leading-loose">
               <div dangerouslySetInnerHTML={{ __html: about[0].html }} />
             </p>
