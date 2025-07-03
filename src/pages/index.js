@@ -28,10 +28,9 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="">
-        <Aboutme />
-        <New news={newsArray} />
-      </div>
+      <Aboutme />
+
+      <New news={newsArray} />
       <PeopleCards />
       <Research researches={researchData} />
       {/* <Research researches={researches} showLink /> */}
