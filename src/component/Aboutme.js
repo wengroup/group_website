@@ -42,8 +42,8 @@ export const Aboutme = () => {
   } = data;
 
   return (
-    <div className="border-red-700 border w-full">
-      <div className="absolute inset-0 -z-10 overflow-hidden border-red-500">
+    <div className=" w-full">
+      <div className="absolute inset-0 -z-10 overflow-hidden ">
         <GatsbyImage
           image={data.hero.childrenImageSharp[0].gatsbyImageData}
           alt="wengroup"
