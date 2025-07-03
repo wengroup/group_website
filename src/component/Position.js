@@ -30,7 +30,7 @@ export const Position = ({ positions }) => {
       <ul className="sm:w-128 flex mx-auto w-5/6 flex-col">
         {positions.map((p) => {
           return (
-            <li key={p.id} className=" mb-7">
+            <li key={p.id} className=" mb-14">
               <h2 className="text-center sm:text-left people-title pb-2">
                 {p.frontmatter.title}
               </h2>

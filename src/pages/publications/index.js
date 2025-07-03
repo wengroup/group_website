@@ -45,17 +45,17 @@ const Publications = () => {
     return (
       <Layout>
         <div className="flex justify-center items-center">
-          <div className=" w-3/4">
+          <div className=" w-1/2">
             <div className="flex items-center justify-center pt-9 mt-10">
               <h2 className="text-center  people-title w-1/2 pb-10">
                 Publications
               </h2>
             </div>
 
-            <div className="flex justify-center items-center flex-col">
+            <div className="flex  flex-col ">
               {dataArray.map((item) => (
-                <div className="flex">
-                  <p>{item.id}.</p>
+                <div className="flex text-left text-lg">
+                  <p>{item.id}.&nbsp;</p>
 
                   <a
                     href={
