@@ -21,8 +21,8 @@
     overflow-x: hidden;
   }
   .about {
-    font-family: source sans pro, sans-serif;
-    font-size: 1.1em;
+    /* font-family: source sans pro, sans-serif; */
+    font-size: 1.2em;
   }
   .page {
     min-height: calc(100vh - 8rem);

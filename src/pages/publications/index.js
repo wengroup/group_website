@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import Layout from "../../component/Layout";
 import { useStaticQuery, graphql } from "gatsby";
-import { convertHtmlToArray } from "../../utils/convertHtmlToArray";
+import { convertMarkdownToPublications } from "../../utils/convertMDToArray";
 const query = graphql`
   {
     allMarkdownRemark(
@@ -11,6 +11,21 @@ const query = graphql`
       nodes {
         id
         html
+        rawMarkdownBody
+      }
+    }
+    allFile(
+      filter: {
+        extension: { eq: "pdf" }
+        relativeDirectory: { eq: "publications" }
+      }
+    ) {
+      edges {
+        node {
+          name
+          relativePath
+          publicURL
+        }
       }
     }
   }
@@ -19,9 +34,12 @@ const query = graphql`
 const Publications = () => {
   const data = useStaticQuery(query);
   const {
+    allFile: { edges: path },
     allMarkdownRemark: { nodes: publications },
   } = data;
-  const dataArray = convertHtmlToArray(publications[0].html);
+  const dataArray = convertMarkdownToPublications(
+    publications[0].rawMarkdownBody
+  );
 
   if (dataArray.length)
     return (
@@ -34,10 +52,20 @@ const Publications = () => {
               </h2>
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center flex-col">
               {dataArray.map((item) => (
-                <div>
-                  <ReactMarkdown children={item.content} />
+                <div className="flex">
+                  <p>{item.id}.</p>
+
+                  <a
+                    href={
+                      path.find((a) => a.node.relativePath == item.path).node
+                        .publicURL
+                    }
+                    target="_blank"
+                  >
+                    {item.title}
+                  </a>
                 </div>
               ))}
             </div>

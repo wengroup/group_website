@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { useStaticQuery, graphql } from "gatsby";
 const query = graphql`
   {
-    file(extension: { eq: "pdf" }) {
+    file(relativePath: { eq: "people/pi/CV_Wen.pdf" }) {
       publicURL
       relativePath
     }

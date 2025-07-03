@@ -64,10 +64,7 @@ export const Aboutme = () => {
                 className=" rounded-full overflow-hidden w-full h-full object-cover border-4 border-gray-100 shadow-md"
               />
 
-              <div className="flex gap-3 justify-center -mt-9">
-                {/* <div className="flex gap-4 -mt-2"> */}
-                {/* <Publication /> */}
-              </div>
+              <div className="flex gap-3 justify-center -mt-9"></div>
             </div>
           </div>
 

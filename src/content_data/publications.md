@@ -1,7 +1,3 @@
-[publication a](https://www.example.com/my%20great%20page)
+1. [publication a](publications/publication_a.pdf)
 
-[publication a](https://www.example.com/my%20great%20page)
-
-[publication a](https://www.example.com/my%20great%20page)
-
-[publication a](https://www.example.com/my%20great%20page)
+2. [publication b](publications/publication_b.pdf)

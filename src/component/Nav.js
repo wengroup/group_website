@@ -15,8 +15,10 @@ export const Nav = () => {
     <>
       <div className="fixed top-0 w-full h-14 z-50 bg-gray-200 border-b-[3px] border-transparent shadow-md text-lg">
         <ul className="hidden sm:flex justify-end w-5/6 max-w-6xl items-center h-full gap-2 mx-auto pr-0">
-          <li className="mr-auto text-xl font-bold">WEN GROUP</li>
-          <div className="flex gap-5 font-medium">
+          <li className="mr-auto text-xl font-bold">
+            <Link to="/">WEN GROUP</Link>
+          </li>
+          <div className="flex gap-7 font-medium">
             <NavData
               side={false}
               activeItem={activeItem}
