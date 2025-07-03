@@ -148,7 +148,7 @@
   }
   .markdown a {
     color: #041291;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-family: Open Sans;
     /* font-size: 1.1em; */
   }
