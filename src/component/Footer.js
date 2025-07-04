@@ -6,10 +6,11 @@ export const Footer = () => {
     <div className="h-36 w-ful footer bg-gray-50 ">
       <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
         <div>
-          <p className="font-medium">联系方式：</p>
+          {/* <p className="font-medium">联系方式：</p> */}
+          <p>联系方式：</p>
           <p>四川省成都市高新区（西区）西源大道2006号</p>
-          <p>基础与前沿研究院</p>
-          <p>Email: mjwen@uestc.edu.cn</p>
+          <p>电子科技大学，基础与前沿研究院</p>
+          {/* <p>Email: mjwen@uestc.edu.cn</p> */}
         </div>
         <div>
           <p>
