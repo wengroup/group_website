@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavData } from "../data/nav-data";
 import { FiMenu } from "react-icons/fi";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "gatsby";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const Nav = () => {
   const [toggleSideMenue, setToggleSideMenue] = useState(false);
   const sideMenue = () => {
     setToggleSideMenue(!toggleSideMenue);
   };
-  const [activeItem, setActiveItem] = useState(); // 默认选中 "about"
+
+  // 默认选中 "about"
+
   return (
     <>
       <div className="fixed top-0 w-full h-16 z-50 bg-white border-b-[3px] border-transparent shadow-md text-lg">
@@ -18,12 +19,8 @@ export const Nav = () => {
           <li className="mr-auto text-2xl font-medium">
             <Link to="/">WEN GROUP</Link>
           </li>
-          <div className="flex gap-7 font-medium">
-            <NavData
-              side={false}
-              activeItem={activeItem}
-              setActiveItem={setActiveItem}
-            />
+          <div className="flex gap-7 font-medium ">
+            <NavData side={false} />
           </div>
 
           {/* <Link to="/blogs">
@@ -60,11 +57,7 @@ export const Nav = () => {
         }
       >
         <ul>
-          <NavData
-            side={true}
-            activeItem={activeItem}
-            setActiveItem={setActiveItem}
-          />
+          <NavData side={true} />
           {/* <h1 className="px-3 side-nav flex flex-col">
             <Link to="/blogs/">BLOG</Link>
           </h1> */}
