@@ -5,26 +5,24 @@ import { useStaticQuery, graphql } from "gatsby";
 import { convertMarkdownToPublications } from "../../utils/convertMDToArray";
 const query = graphql`
   {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/content_data/publications.md" } }
-    ) {
-      nodes {
-        id
-        html
-        rawMarkdownBody
-      }
-    }
-    allFile(
-      filter: {
-        extension: { eq: "pdf" }
-        relativeDirectory: { eq: "publications" }
-      }
-    ) {
+    allReference {
       edges {
         node {
-          name
-          relativePath
-          publicURL
+          key
+          title
+          journal
+          file {
+            id
+            publicURL
+            relativePath
+          }
+          year
+          doi
+          author
+          id
+          publisher
+          volume
+          pages
         }
       }
     }
@@ -34,41 +32,50 @@ const query = graphql`
 const Publications = () => {
   const data = useStaticQuery(query);
   const {
-    allFile: { edges: path },
-    allMarkdownRemark: { nodes: publications },
+    allReference: { edges: papers },
   } = data;
-  const dataArray = convertMarkdownToPublications(
-    publications[0].rawMarkdownBody
-  );
 
-  if (dataArray.length)
+  if (papers.length)
     return (
       <Layout>
         <div className="flex justify-center items-center">
           <div className=" w-1/2">
-            <div className="flex items-center justify-center pt-9 mt-10">
+            <div className="flex items-center justify-center pt-24 mt-10">
               <h2 className="text-center  people-title w-1/2 pb-10">
                 Publications
               </h2>
             </div>
 
-            <div className="flex  flex-col ">
-              {dataArray.map((item) => (
-                <div className="flex text-left text-lg">
-                  <p>{item.id}.&nbsp;</p>
-
+            <ol
+              className="list-decimal list-outside pl-6"
+              style={{ fontFamily: "Arial, sans-serif" }}
+            >
+              {papers.map((item) => (
+                <li key={item.node.id} className="mb-4 text-left text-lg">
                   <a
-                    href={
-                      path.find((a) => a.node.relativePath == item.path).node
-                        .publicURL
-                    }
+                    href={item.node.file?.publicURL || "#"}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    className="paper-link hover:underline font-medium"
                   >
-                    {item.title}
+                    {item.node.title}
                   </a>
-                </div>
+                  <span className="text-gray-700">. {item.node.author}. </span>
+                  <span className="italic font-semibold">
+                    {item.node.journal}
+                  </span>
+                  {item.node.volume && (
+                    <span className="text-gray-700">, {item.node.volume}</span>
+                  )}
+                  {item.node.pages && (
+                    <span className="text-gray-700">, {item.node.pages}</span>
+                  )}
+                  {item.node.year && (
+                    <span className="text-gray-700">, {item.node.year}</span>
+                  )}
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </div>
       </Layout>

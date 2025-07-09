@@ -42,7 +42,7 @@ export const NavData = ({ side }) => {
               className={`${
                 side
                   ? "side-nav indent-0  hover:text-Hightlight btn"
-                  : "  hover:text-Hightlight btn "
+                  : "hover:text-Hightlight btn "
               } `}
               // onAnchorLinkClick={() => setActiveItem(item)}
             >
