@@ -39,7 +39,7 @@ const Publications = () => {
     return (
       <Layout>
         <div className="flex justify-center items-center">
-          <div className=" w-1/2">
+          <div className=" w-3/5">
             <div className="flex items-center justify-center pt-24 mt-10">
               <h2 className="text-center  people-title w-1/2 pb-10">
                 Publications
@@ -47,11 +47,25 @@ const Publications = () => {
             </div>
 
             <ol
-              className="list-decimal list-outside pl-6"
-              style={{ fontFamily: "Arial, sans-serif" }}
+              className=" pl-6"
+              style={{
+                fontFamily: "Arial, sans-serif",
+                listStyle: "none",
+                counterReset: "item " + (papers.length + 1),
+              }}
             >
               {papers.map((item) => (
-                <li key={item.node.id} className="mb-4 text-left text-lg">
+                <li
+                  key={item.node.id}
+                  className="mb-4 text-left text-lg relative"
+                  style={{
+                    counterIncrement: "item -1",
+                  }}
+                >
+                  <span className="absolute -left-6">
+                    {papers.length - papers.indexOf(item)}.{" "}
+                  </span>
+
                   <a
                     href={item.node.file?.publicURL || "#"}
                     target="_blank"
