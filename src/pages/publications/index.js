@@ -85,7 +85,7 @@ const Publications = () => {
                     <span className="text-gray-700">, {item.node.pages}</span>
                   )}
                   {item.node.year && (
-                    <span className="text-gray-700">, {item.node.year}</span>
+                    <span className="text-gray-700">, {item.node.year}.</span>
                   )}
                 </li>
               ))}
