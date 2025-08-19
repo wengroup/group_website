@@ -49,52 +49,33 @@ export const Aboutme = () => {
   }, []);
 
   return (
-    <div className=" w-full">
-      <div className="absolute inset-0 -z-10 overflow-hidden ">
+    <div className="w-full">
+      {/* 背景图片 - 调整了移动端的显示方式 */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <GatsbyImage
           image={data.hero.childrenImageSharp[0].gatsbyImageData}
           alt="wengroup"
-          className={`object-cover w-full h-full opacity-50 block mx-auto transition-transform duration-1000 ease-out ${
-            zoomed ? "scale-110" : "scale-100"
-          }`}
+          className="object-cover w-full h-full opacity-50 block mx-auto"
         />
       </div>
 
       <article
         id="about"
-        className="sm:col-span-2 h-screen pt-16 relative flex justify-center items-center"
+        className="h-screen relative flex items-center px-4 
+                  md:ml-80 md:px-36"
       >
-        {/* this is the about me div */}
-        <div className=" flex flex-col md:flex-row md:gap-36 gap-5 justify-between md:py-40 py-8 w-3/4">
-          {/* <h2 className="text-center"></h2> */}
-          {/* there used to be an `About` text above; we've removed it */}
-          <div className="flex flex-col items-center md:w-auto">
-            <div className=" w-40 h-40 md:w-60 md:h-60 flex-shrink-0 ">
-              <GatsbyImage
-                image={data.headshot.childrenImageSharp[0].gatsbyImageData}
-                alt="wengroup"
-                className=" rounded-full overflow-hidden w-full h-full object-cover border-4 border-gray-100 shadow-md"
-              />
-
-              {/* <div className="flex gap-3 justify-center -mt-9"></div> */}
-            </div>
-          </div>
-
-          <div className=" text-xl ">
-            <p className="about ">
-              <div dangerouslySetInnerHTML={{ __html: about[0].html }} />
-            </p>
-            {/* <a
-              className="inline-block px-7 py-2 bg-white border border-[#c0c6ca] rounded-full text-[#2b495b] font-semibold tracking-wide hover:bg-[#c0c6ca] hover:text-[#2b495b] transition mt-10"
-              href={data.file.publicURL}
-            >
-              DOWNLOAD CV
-            </a> */}
-            {/* <ReactMarkdown children={about[0].about} className="markdown" /> */}
+        <div
+          className="flex flex-col md:flex-row gap-5 md:gap-36 py-8  w-full
+                      mx-auto max-w-screen-xl"
+        >
+          {" "}
+          <div className="text-base md:text-xl mt-0 md:-mt-28 px-4 md:px-0">
+            <div
+              className="about leading-relaxed md:leading-loose"
+              dangerouslySetInnerHTML={{ __html: about[0].html }}
+            />
           </div>
         </div>
-        {/* this is the publication div */}
-        {/* <Publication /> */}
       </article>
     </div>
   );

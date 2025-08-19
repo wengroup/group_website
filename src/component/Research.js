@@ -52,7 +52,7 @@ export const Research = ({ researches, showLink }) => {
           <SubtitleIconSvg icon={data.file.publicURL} />
         )}
       </div> */}
-      <ul className="grid gap-5">
+      <ul className="grid gap-20">
         {researches.map((item) => {
           return <ResearchCard item={item} key={item.id} imgs={imgs} />;
         })}

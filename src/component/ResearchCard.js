@@ -20,7 +20,7 @@ const ResearchCard = ({ item, imgs }) => {
               //   alt={item.frontmatter.title}
               //   className="w-1/2 mb-4"
               // />
-              <img src={p.publicURL} className=" w-1/2 mb-4 mx-auto"></img>
+              <img src={p.publicURL} className=" w-2/3 mb-4 mx-auto"></img>
             );
           } else {
             return null;

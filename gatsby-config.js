@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-postcss`,
+
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -35,6 +36,7 @@ module.exports = {
         path: `${__dirname}/src/icon/`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -42,6 +44,7 @@ module.exports = {
         path: `${__dirname}/src/content_data/`,
       },
     },
+    `gatsby-transformer-bibtex`,
     // {
     //   resolve: `gatsby-source-strapi`,
     //   options: {

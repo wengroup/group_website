@@ -29,4 +29,9 @@ For steps 1 and 3, see the Dev Tools section in the [Group Manual](https://wengr
 
   See existing files for examples.
 
+  ## Add publications
+
+- Navigate to the corresponding folder in [content_data/paper.bib](./src/content_data/paper.bib/).
+- Add the new paper following the existing format.
+
 ### 3. Make a pull request

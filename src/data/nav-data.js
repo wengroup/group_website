@@ -11,52 +11,42 @@ export const navData = [
   "publications",
   "Wiki",
 ];
-export const NavData = ({ side, activeItem, setActiveItem }) => {
+export const NavData = ({ side }) => {
   return (
     <>
       {navData.map((item, index) => (
         <li key={index} className=" font-roboto capitalize">
-          {item === "about" ? (
-            <Link to="/" onClick={() => setActiveItem(item)}>
-              <li
-                className={`${side ? "side-nav indent-0 font-roboto" : ""} ${
-                  activeItem === item ? "font-extrabold" : ""
-                }`} // 动态加粗
-              >
-                {item}
-              </li>
-            </Link>
-          ) : item === "Wiki" ? (
+          {item === "Wiki" ? (
             <a
               href="https://wengroup.github.io/group_manual"
               target="_blank"
               rel="noreferrer noopener"
               className={`${
                 side
-                  ? "side-nav indent-0 font-roboto capitalize "
-                  : " font-roboto capitalize bg-"
+                  ? "side-nav indent-0 hover:text-Hightlight btn"
+                  : "  hover:text-Hightlight btn"
               }`}
             >
               Wiki
             </a>
-          ) : item === "Blogs" ? (
-            <Link to="/blogs">
-              <li className=" capitalize font-roboto  ">blogs</li>
-            </Link>
           ) : (
+            // item === "Blogs" ? (
+            //   <Link to="/blogs">
+            //     <li className=" capitalize font-roboto hover:text-Hightlight btn">
+            //       blogs
+            //     </li>
+            //   </Link>
+            // ) :
             <AnchorLink
               to={`/#${item}`}
-              onAnchorLinkClick={() => setActiveItem(item)}
+              className={`${
+                side
+                  ? "side-nav indent-0  hover:text-Hightlight btn"
+                  : "hover:text-Hightlight btn "
+              } `}
+              // onAnchorLinkClick={() => setActiveItem(item)}
             >
-              <li
-                className={`${
-                  side
-                    ? "side-nav indent-0 font-roboto capitalize"
-                    : " font-roboto capitalize "
-                } ${activeItem === item ? "font-extrabold" : ""}`} // 动态加粗
-              >
-                {item}
-              </li>
+              {item}
             </AnchorLink>
           )}
         </li>

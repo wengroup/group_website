@@ -47,7 +47,7 @@ const Alumni = () => {
         <div className="flex justify-center items-center">
           <div className=" w-3/4">
             <div className="flex items-center justify-center pt-9 mt-10">
-              <h2 className="text-center  people-title w-1/2 pb-10">Alumni</h2>
+              <h2 className="text-center  w-1/2 pb-10">Alumni</h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
