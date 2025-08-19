@@ -5,9 +5,7 @@ import PeopleCardTest from "./PeopleCard";
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "/content_data/people/undergraduates/.*/" }
-      }
+      filter: { fileAbsolutePath: { regex: "/content_data/people/master/.*/" } }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
@@ -21,9 +19,7 @@ const query = graphql`
         id
       }
     }
-    allFile(
-      filter: { relativeDirectory: { eq: "people/undergraduates/photo" } }
-    ) {
+    allFile(filter: { relativeDirectory: { eq: "people/master/photo" } }) {
       nodes {
         relativePath
         extension
@@ -36,7 +32,7 @@ const query = graphql`
   }
 `;
 
-const UndergraduatesCards = () => {
+const MasterCards = () => {
   const data = useStaticQuery(query);
   const {
     allMarkdownRemark: { nodes: master },
@@ -47,7 +43,7 @@ const UndergraduatesCards = () => {
       <div className="flex justify-center items-center">
         <div className=" w-3/4">
           <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-            Undergraduate Students
+            M.S. Students
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
             {master.map((master) => {
@@ -65,4 +61,4 @@ const UndergraduatesCards = () => {
   else return null;
 };
 
-export default UndergraduatesCards;
+export default MasterCards;
