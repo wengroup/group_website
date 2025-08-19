@@ -82,7 +82,7 @@ export const Publication = () => {
       <p className="w-full text-center pt-20 text-2xl font-medium text-gray-500">
         {/* <a href="">Full publication list...</a> */}
         <Link to="/publications">
-          <p>Full publication list...</p>
+          <p className="hover:underline">Full publication list...</p>
         </Link>
       </p>
     </div>
