@@ -11,7 +11,6 @@ function randomColor() {
 }
 
 const BlogCard = ({ blog }) => {
-  console.log(blog);
   return (
     <Link to={`/blogs/${blog.frontmatter.slug}`}>
       <Card style={{ backgroundColor: "rgb(241 245 249)" }}>

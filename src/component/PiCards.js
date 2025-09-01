@@ -41,19 +41,21 @@ const PiCards = () => {
   } = data;
   if (PI.length)
     return (
-      <div>
-        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Principal Investigator
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
-          {PI.map((p) => {
-            return (
-              <div key={p.id}>
-                {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={p} img={photo} pi />
-              </div>
-            );
-          })}
+      <div className="flex justify-center items-center">
+        <div className=" w-3/4">
+          <h2 className="text-center sm:text-left people-title sm:pl-11 ">
+            Principal Investigator
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+            {PI.map((p) => {
+              return (
+                <div key={p.id}>
+                  {/* <PeopleCard people={graduate} /> */}
+                  <PeopleCardTest people={p} img={photo} pi />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

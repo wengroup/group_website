@@ -9,6 +9,7 @@ import PeopleCards from "../component/PeopleCards";
 import Seo from "../component/SEO";
 import { Position } from "../component/Position";
 import { convertHtmlToArray } from "../utils/convertHtmlToArray";
+import { Publication } from "../component/Publication";
 
 const Home = ({ data }) => {
   // const {
@@ -27,15 +28,15 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-8 px-8">
-        <Aboutme />
-        <New news={newsArray} />
-      </div>
+      <Aboutme />
+
+      <New news={newsArray} />
       <PeopleCards />
       <Research researches={researchData} />
       {/* <Research researches={researches} showLink /> */}
       <Code codes={codeData} />
       <Position positions={positionData} />
+      <Publication />
     </Layout>
   );
 };

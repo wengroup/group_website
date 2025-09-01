@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import PeopleCardTest from "./PeopleCard";
+
 const query = graphql`
   {
     allMarkdownRemark(
@@ -38,24 +39,26 @@ const query = graphql`
 const UndergraduatesCards = () => {
   const data = useStaticQuery(query);
   const {
-    allMarkdownRemark: { nodes: undergraduates },
+    allMarkdownRemark: { nodes: master },
     allFile: { nodes: photo },
   } = data;
-  if (undergraduates.length)
+  if (master.length)
     return (
-      <div>
-        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Undergraduate Students
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
-          {undergraduates.map((undergraduate) => {
-            return (
-              <div key={undergraduate.id}>
-                {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={undergraduate} img={photo} />
-              </div>
-            );
-          })}
+      <div className="flex justify-center items-center">
+        <div className=" w-3/4">
+          <h2 className="text-center sm:text-left people-title sm:pl-11 ">
+            Undergraduates
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+            {master.map((master) => {
+              return (
+                <div key={master.id}>
+                  {/* <PeopleCard people={graduate} /> */}
+                  <PeopleCardTest people={master} img={photo} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

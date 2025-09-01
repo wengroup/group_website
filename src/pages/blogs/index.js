@@ -10,20 +10,23 @@ const Blogs = ({ data }) => {
   } = data;
   return (
     <Layout>
-      <Grid
-        container
-        spacing={2}
-        alignItems="baseline"
-        style={{ padding: "2rem", paddingBottom: "6rem" }}
-      >
-        {blogs.map((blog) => {
-          return (
-            <Grid item key={blog.id} sm={4}>
-              <BlogCard blog={blog} />
-            </Grid>
-          );
-        })}
-      </Grid>
+      <h2 className="text-center mb-20 pt-20">Blogs</h2>
+      <div className="px-20">
+        <Grid
+          container
+          spacing={2}
+          alignItems="baseline"
+          style={{ padding: "2rem", paddingBottom: "6rem" }}
+        >
+          {blogs.map((blog) => {
+            return (
+              <Grid item key={blog.id} sm={4}>
+                <BlogCard blog={blog} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </div>
     </Layout>
   );
 };

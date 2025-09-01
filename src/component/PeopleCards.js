@@ -6,6 +6,8 @@ import GraduatesCards from "./GraduatesCards";
 import PiCards from "./PiCards";
 import PostdocsCards from "./PostdocsCards";
 import UndergraduatesCards from "./UndergraduatesCards";
+import { Link } from "gatsby";
+import MasterCards from "./MasterCards";
 const query = graphql`
   {
     file(name: { eq: "people" }) {
@@ -21,22 +23,29 @@ const query = graphql`
 const PeopleCards = () => {
   const data = useStaticQuery(query);
   return (
-    <div id="people">
+    <div id="people" className="bg-gray-50">
       <>
-        <h2 className="text-center pt-20 mt-20 sm:mt-0">PEOPLE</h2>
-        <div className="flex flex-row justify-center mb-10 ">
-          {data.file.childrenImageSharp === [] ? (
+        <h2 className="text-center mb-20 pt-20">People</h2>
+        {/* <div className="flex flex-row justify-center mb-10 ">
+          {data.file.childrenImageSharp == [] ? (
             <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
           ) : (
             <SubtitleIconSvg icon={data.file.publicURL} smaller />
           )}
-        </div>
+        </div> */}
       </>
       <div className="flex flex-col gap-8">
         <PiCards />
         <PostdocsCards />
         <GraduatesCards />
+        <MasterCards />
         <UndergraduatesCards />
+
+        <Link to="/alumni" className="flex items-center justify-center ">
+          <h2 className="pb-20 people-title w-3/4 sm:pl-11 hover:underline">
+            Alumni...
+          </h2>
+        </Link>
       </div>
     </div>
   );
