@@ -71,7 +71,7 @@ export const Aboutme = () => {
           {" "}
           <div className="text-base md:text-xl mt-0 md:-mt-28 px-4 md:px-0">
             <div
-              className="about leading-relaxed md:leading-loose"
+              className="about leading-relaxed md:leading-loose max-w-6xl"
               dangerouslySetInnerHTML={{ __html: about[0].html }}
             />
           </div>
