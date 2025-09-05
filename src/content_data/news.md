@@ -1,3 +1,12 @@
+# May 9, 2025
+Our paper on building machine learning interatomic potentials using Cartesian atomic moment appears on _npj Computational Materials_. https://doi.org/10.1038/s41524-025-01623-4
+
+# March 1, 2025
+Mingjian join the University of Electronic Science and Technology of China!
+
+# December 31, 2024
+Mingjian resigned from the University of Houston. Thanks to my colleagues - it was nice working with you all.
+
 # June 3, 2024
 Welcome summer research interns Abby, Catalina, and Lawrence to the group!
 
