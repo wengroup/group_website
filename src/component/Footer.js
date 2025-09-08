@@ -8,7 +8,7 @@ export const Footer = () => {
         <div>
           {/* <p className="font-medium">联系方式：</p> */}
           <p>Contact:</p>
-          <p>No. 2006 Xiyuan Ave, Chengdu, Sichuan</p>
+          <p>No. 2006 Xiyuan Ave, Chengdu, Sichuan, China</p>
           <p>IFFS, UESTC</p>
           {/* <p>Email: mjwen@uestc.edu.cn</p> */}
         </div>
