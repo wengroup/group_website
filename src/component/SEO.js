@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet"
 
 const Seo = () => {
   return (
-    <Helmet htmlAttributes={{ lang: "en" }} title="Mingjian Wen">
-      <meta name="description" content="This is Mingjian Wen's website" />
+    <Helmet htmlAttributes={{ lang: "en" }} title="Wen Group">
+      <meta name="description" content="This is the Wen Group website" />
     </Helmet>
   )
 }
