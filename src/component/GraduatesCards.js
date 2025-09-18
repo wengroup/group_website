@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import PeopleCardTest from "./PeopleCard";
+
 const query = graphql`
   {
     allMarkdownRemark(
