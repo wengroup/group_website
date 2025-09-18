@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { convertMarkdownToPublications } from "../../utils/convertMDToArray";
 const query = graphql`
   {
-    allReference(sort: { fields: year, order: DESC }) {
+    allReference(sort: { fields: year }) {
       edges {
         node {
           key
