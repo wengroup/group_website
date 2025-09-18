@@ -1,3 +1,6 @@
+# August 25, 2025
+The fall semester begins, and we welcome a new cohort of PhD, MS, and undergraduate students to the group!
+
 # May 9, 2025
 Our paper on building machine learning interatomic potentials using Cartesian atomic moment appears on _npj Computational Materials_. https://doi.org/10.1038/s41524-025-01623-4
 
