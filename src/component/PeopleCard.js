@@ -17,7 +17,7 @@ const PeopleCardTest = ({ people, img, pi }) => {
   const data = useStaticQuery(query);
   return (
     <>
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:mx-0  sm:pb-0 text-center">
             {img.map((p) => {
@@ -41,7 +41,7 @@ const PeopleCardTest = ({ people, img, pi }) => {
           </div>
           <div className="text-sm self-center text-center sm:text-left">
             <p className="text-lg font-semibold">{frontmatter.name}</p>
-            {pi && <p className="w-max text-lg">{frontmatter.title}</p>}
+            {pi && <p className="text-lg">{frontmatter.title}</p>}
             {/* <p className="w-max">{title}</p> */}
             <p className="text-gray-500 text-base">{frontmatter.Email}</p>
             {/* <p>{website}</p> */}
