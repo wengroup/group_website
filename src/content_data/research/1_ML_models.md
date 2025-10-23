@@ -1,5 +1,5 @@
 ---
-title: AI for Material Sciences
+title: AI for Materials Science
 img: research/img/camp_mlip.png
 ---
 
