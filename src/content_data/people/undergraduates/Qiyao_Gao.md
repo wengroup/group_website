@@ -1,5 +1,5 @@
 ---
-name: Qiyao Gao
+name: Qiyao Gao (高启尧)
 Email: qiyao_gao@std.uestc.edu.cn
 photo: people/undergraduates/photo/qiyao_gao.jpg
 date: 2025-09-01

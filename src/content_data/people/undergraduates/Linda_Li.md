@@ -1,5 +1,5 @@
 ---
-name: Linda Li
+name: Linda Li (李林达)
 Email: 2024020901017@std.uestc.edu.cn
 photo: people/undergraduates/photo/Linda_Li.jpg
 date: 2025-09-03
