@@ -1,5 +1,5 @@
 ---
-title: Accelerated Atomistic Molecular Simulations
+title: Reliable Molecular Simulations
 img: research/img/pes_2d_materials.png
 ---
 
