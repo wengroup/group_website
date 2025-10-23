@@ -1,6 +1,6 @@
 ---
 title: Accelerated Reliable Atomistic Simulations
-img: research/img/pes_2d_materials.png
+img: research/img/pes_uq.png
 ---
 
 Atomistic simulations are a powerful computational technique for exploring material behavior at the atomic scale. At the core of any atomistic simulation lies a description of the interactions between atoms that produces the forces governing their motion. <br><br>
