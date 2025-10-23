@@ -1,5 +1,5 @@
 ---
-title: AI Models for Materials and Chemical Sciences
+title: AI for Material Sciences
 img: research/img/camp_mlip.png
 ---
 
