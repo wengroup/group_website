@@ -1,8 +1,9 @@
 ---
-title: Machine Learning Chemical Reactions
-img: research/img/gnn_reaction.png
+title: AI Models for Materials and Chemical Sciences
+img: research/img/camp_mlip.png
 ---
 
-Machine learning methods, especially deep learning, have significantly expanded a chemist's toolbox, enabling the construction of quantitatively predictive models directly from data. These models make it possible to explore the gigantic chemical space to make chemical discoveries.<br><br>
+Machine learning methods, particularly deep learning, have significantly expanded the toolbox for constructing predictive and generative scientific models. These models make it possible to accurately and efficiently explore the gigantic design space of new materials and chemicals. <br><br>
 
-Our group focus on the chemical reaction space. We develop novel graph neural networks that are able to represent any chemical reactions with bond alterations and apply them to model reaction properties such as reaction energy, reaction type, and activation energy. These models have been used to investigate the reaction pathways in battery electrolytes.
+Our group pioneers the development of novel AI algorithms that integrate core physical principles to create such models and advance their capabilities. These algorithms enable both the precise forecasting of material properties and the intelligent design of new compounds with targeted functions.
+
