@@ -37,31 +37,26 @@ const Seo = ({ title, description, image, url, lang }) => {
 
       {/* Schema.org */}
       <script type="application/ld+json">
-        {JSON.stringify({
+        {`
+        {
           "@context": "https://schema.org",
           "@type": "ResearchLab",
           "name": "文明健课题组 - Mingjian Wen Group",
-          "description": seoDescription,
-          "url": seoUrl,
-          "logo": `${seoUrl}logo.png`,
-          "memberOf": {
+          "description": "文明健课题组 - 电子科大 ｜ Wen Group, UESTC",
+          "url": "https://wengroup.github.io",
+          "affiliation": {
             "@type": "CollegeOrUniversity",
-            "name": "电子科技大学",
+            "name": "电子科技大学, UESTC",
             "url": "https://www.uestc.edu.cn"
-          },
-          "parentOrganization": {
-            "@type": "ResearchInstitute",
-            "name": "基础与前沿研究院",
-            "url": "https://www.iffs.uestc.edu.cn"
           },
           "founder": {
             "@type": "Person",
-            "name": "文明健",
-            "url": `${seoUrl}#principal-investigator`
+            "name": "文明健, Mingjian Wen",
+            "jobTitle": "Professor",
           },
           "keywords": "人工智能材料设计, 机器学习势函数, 材料基因组, 电池材料, 磁性材料",
-          "areaServed": "全球"
-        })}
+        }
+        `}
       </script>
     </Helmet>
   );
