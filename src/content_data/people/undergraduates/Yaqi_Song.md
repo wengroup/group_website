@@ -1,5 +1,5 @@
 ---
-name: Yaqi Song
+name: Yaqi Song (宋亚琪)
 Email: 2024270903001@std.uestc.edu.cn
 photo: people/undergraduates/photo/Yaqi_Song.jpg
 date: 2025-09-04

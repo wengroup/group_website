@@ -1,5 +1,5 @@
 ---
-name: Haoyang Wang
+name: Haoyang Wang (汪浩洋)
 Email: 202522020823@std.uestc.edu.cn
 photo: people/master/photo/Haoyang_Wang.png
 date: 2025-09-02

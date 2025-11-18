@@ -1,5 +1,5 @@
 ---
-name: Jiayuan Sun
+name: Jiayuan Sun (孙嘉远)
 Email: 2024270902013@std.uestc.edu.cn
 photo: people/undergraduates/photo/Jiayuan_Sun.jpg
 date: 2025-09-05

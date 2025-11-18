@@ -1,5 +1,5 @@
 ---
-name: Boyu Wang
+name: Boyu Wang (王博宇)
 Email: bywang@std.uestc.edu.cn
 photo: people/undergraduates/photo/Boyu_Wang.jpg
 date: 2025-09-02

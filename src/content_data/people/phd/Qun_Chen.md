@@ -1,5 +1,5 @@
 ---
-name: Qun Chen
+name: Qun Chen (陈群)
 Email: qunchen@std.uestc.edu.cn
 photo: people/phd/photo/Qun_Chen.jpg
 date: 2025-09-01

@@ -1,5 +1,5 @@
 ---
-name: Mingjian Wen
+name: Mingjian Wen (文明健)
 date: 2019-03-11
 Email: mjwen@uestc.edu.cn
 photo: people/pi/photo/headshot_Wen.png

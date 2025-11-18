@@ -1,4 +1,6 @@
 ---
 title: Graduate Students
-description: We take a couple of new graduate students each year. Prospective students are encouraged to take a look at the [department website](https://www.chee.uh.edu/graduate/admissions) for information on how to apply for admission. Students who have already been admitted please send Dr. Wen an email if you are interested in joining the group.
+description: Our group welcomes new PhD and Master students from diverse academic backgrounds each year. We value interdisciplinary collaboration and encourage students with backgrounds in Materials Science, Computer Science, Physics, Chemistry, Solid Mechanics, and other related fields to apply.
+
+Prospective students should contact Prof. Wen by email with the following documents: resume, proof of English proficiency, academic transcripts, and a brief description of your research interests.
 ---
