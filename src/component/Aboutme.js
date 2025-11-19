@@ -69,7 +69,7 @@ export const Aboutme = () => {
                       mx-auto max-w-screen-xl"
         >
           {" "}
-          <div className="text-base md:text-xl mt-0 md:-mt-28 px-4 md:px-0">
+          <div className=" text-base md:text-xl mt-0 md:-mt-28 px-4 md:px-0">
             <div
               className="about leading-relaxed md:leading-loose max-w-5xl"
               dangerouslySetInnerHTML={{ __html: about[0].html }}

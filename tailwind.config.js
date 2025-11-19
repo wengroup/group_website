@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["'Akshar', sans-serif"],
-        opensans: ["open sans", "sans-serif"],
+        roboto: ["'Akshar', 'sans-serif'"],
+        opensans: ["'open sans'", "'sans-serif'"],
       },
       height: {
         128: "32rem",

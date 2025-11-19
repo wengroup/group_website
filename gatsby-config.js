@@ -75,11 +75,18 @@ module.exports = {
         fonts: {
           google: [
             { family: "Roboto", variants: ["400", "700"] },
-            { family: "Open Sans", variants: ["400", "600", "700"] },
+            {
+              family: "Open Sans",
+              variants: ["300", "400", "500", "600", "700"],
+            },
             { family: "Oswald", variants: ["200", "400"] },
             { family: "Source Sans Pro", variants: ["200", "300", "700"] },
           ],
         },
+        usePreload: true,
+        usePreconnect: true,
+        formats: ["woff2", "woff"],
+        crossorigin: "anonymous",
       },
     },
     {
