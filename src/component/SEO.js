@@ -14,11 +14,11 @@ const Seo = ({ title, description, image, url, lang }) => {
   const defaultUrl = "https://wengroup.github.io/";
   const defaultLang = "en";
 
-  const seoTitle = title || defaultTitle;
-  const seoDescription = description || defaultDescription;
+  const seoLang = lang || defaultLang;
+  const seoTitle = title || defaultTitle[seoLang] || defaultTitle[defaultLang];
+  const seoDescription = description || defaultDescription[seoLang] || defaultDescription[defaultLang];
   const seoImage = image || defaultImage;
   const seoUrl = url || defaultUrl;
-  const seoLang = lang || defaultLang;
 
   return (
     <Helmet
