@@ -2,8 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const Seo = ({ title, description, image, url, lang }) => {
-  const defaultTitle = "文明健课题组 - 电子科大 ｜ Wen Group, UESTC";
-  const defaultDescription = "电子科技大学文明健教授课题组, 主要研究方向为数据和人工智能驱动的材料设计，包括材料基因组、机器学习算法、不确定性量化、能源及磁性材料等领域的交叉研究。";
+  const defaultTitle = {
+    en: "文明健课题组 - 电子科大 ｜ Wen Group, UESTC",
+    zh: "文明健课题组 - 电子科大 ｜ Wen Group, UESTC",
+  };
+  const defaultDescription = {
+    en: "Mingjian Wen Research Group at UESTC, focusing on AI for Science, Materails Genome Engineering, and Energy Storage Systems.",
+    zh: "电子科技大学文明健教授课题组, 主要研究方向为数据和人工智能驱动的材料设计，包括材料基因组、机器学习算法、不确定性量化、能源及磁性材料等领域的交叉研究。",
+   };
   const defaultImage = "https://wengroup.github.io/preview.png";
   const defaultUrl = "https://wengroup.github.io/";
   const defaultLang = "en";
