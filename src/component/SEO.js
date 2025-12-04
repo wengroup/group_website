@@ -30,12 +30,18 @@ const Seo = ({ title, description, image, url, lang }) => {
       <meta name="author" content="文明健, Mingjian Wen Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+      {/* Help search engine to find the image */}
+      <link rel="image_src" href={seoImage} />
+
       {/* Open Graph */}
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={seoUrl} />
       <meta property="og:image" content={seoImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={seoTitle} />
       <meta property="og:site_name" content="文明健课题组 - Mingjian Wen Group UESTC" />
 
       {/* Canonical Link */}
@@ -49,6 +55,15 @@ const Seo = ({ title, description, image, url, lang }) => {
           "name": "文明健课题组 - Mingjian Wen Group",
           "description": seoDescription,
           "url": seoUrl,
+          "logo": seoImage,
+          "image": seoImage,
+          "primaryImageOfPage": {  // 添加这个属性指定页面主图
+            "@type": "ImageObject",
+            "url": seoImage,
+            "width": 1200,
+            "height": 630,
+            "caption": seoDescription
+          },
           "affiliation": {
             "@type": "CollegeOrUniversity",
             "name": "电子科技大学, UESTC",
