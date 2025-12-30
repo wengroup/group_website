@@ -49,7 +49,7 @@ export const Aboutme = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {/* 背景图片 - 调整了移动端的显示方式 */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <GatsbyImage
@@ -62,16 +62,16 @@ export const Aboutme = () => {
       <article
         id="about"
         className="h-screen relative flex items-center px-4 
-                  md:ml-80 md:px-36"
+                  md:ml-72 md:px-36  "
       >
         <div
           className="flex flex-col md:flex-row gap-5 md:gap-36 py-8  w-full
-                      mx-auto max-w-screen-xl"
+                      mx-auto max-w-screen-xl "
         >
           {" "}
-          <div className=" text-base md:text-xl mt-0 md:-mt-28 px-4 md:px-0">
+          <div className=" text-base md:text-xl mt-0 md:-mt-28 px-4 md:px-0 ">
             <div
-              className="about leading-relaxed md:leading-loose max-w-5xl"
+              className="about leading-relaxed md:leading-loose"
               dangerouslySetInnerHTML={{ __html: about[0].html }}
             />
           </div>
