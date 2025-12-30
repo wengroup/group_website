@@ -1,5 +1,4 @@
-Welcome to the **Wen Group** at the University of Electronic Science and Technology of
-China!
+Welcome to the **Wen Group** at the University of Electronic Science and Technology of China!
 
 &nbsp;
 
