@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import BlogCard from "../../component/BlogCard";
 import Layout from "../../component/Layout";
 import { graphql } from "gatsby";
@@ -33,7 +33,7 @@ const Blogs = ({ data }) => {
 export const query = graphql`
   {
     allMarkdownRemark(
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: {frontmatter: {date: DESC}}
       filter: { fileAbsolutePath: { regex: "/content_data/blogs/.*/" } }
     ) {
       nodes {
