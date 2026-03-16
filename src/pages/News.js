@@ -9,7 +9,6 @@ const News = ({ data }) => {
     allMarkdownRemark: { nodes: news },
   } = data;
   const dataArray = convertHtmlToArray(news[0].html);
-  console.log(dataArray);
   return (
     <Layout>
       <New news={dataArray} showGrid />

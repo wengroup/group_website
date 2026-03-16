@@ -1,48 +1,44 @@
 import TurndownService from "turndown";
+import { parse } from "node-html-parser";
 
-function generateUniqueId() {
-  return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+function generateUniqueId(index) {
+  // Use index to make it deterministic for hydration
+  return `news-item-${index}`;
 }
 
 export function convertHtmlToArray(html) {
   const turndownService = new TurndownService();
-  if (typeof document !== "undefined") {
-    const container = document.createElement("div");
-    container.innerHTML = html;
+  const root = parse(html);
 
-    const entries = container.querySelectorAll("h1, p");
-    const result = [];
-    let currentEntry = null;
+  const entries = root.querySelectorAll("h1, p");
+  const result = [];
+  let currentEntry = null;
 
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
 
-      if (entry.tagName === "H1") {
-        if (currentEntry) result.push(currentEntry); // 保存之前的条目
+    if (entry.tagName === "H1") {
+      if (currentEntry) result.push(currentEntry);
+      currentEntry = {
+        id: generateUniqueId(result.length),
+        date: entry.textContent.trim(),
+        content: "",
+      };
+    } else if (entry.tagName === "P") {
+      const contentMarkdown = turndownService.turndown(entry.innerHTML);
+
+      if (!currentEntry) {
         currentEntry = {
-          id: generateUniqueId(),
-          date: entry.textContent.trim(),
-          content: "",
+          id: generateUniqueId(result.length),
+          content: contentMarkdown,
         };
-      } else if (entry.tagName === "P") {
-        const contentMarkdown = turndownService.turndown(entry.innerHTML);
-
-        // 如果没有 currentEntry（即没有 H1 开头），则创建一个新条目
-        if (!currentEntry) {
-          currentEntry = {
-            id: generateUniqueId(),
-            content: contentMarkdown,
-          };
-        } else {
-          // 如果已有 currentEntry，则追加内容
-          currentEntry.content +=
-            (currentEntry.content ? "\n\n" : "") + contentMarkdown;
-        }
+      } else {
+        currentEntry.content +=
+          (currentEntry.content ? "\n\n" : "") + contentMarkdown;
       }
     }
-
-    if (currentEntry) result.push(currentEntry); // 保存最后一个条目
-    return result;
   }
-  return [];
+
+  if (currentEntry) result.push(currentEntry);
+  return result;
 }

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaGithubSquare } from "react-icons/fa";
 
 export const Footer = () => {
+  const [currentYear, setCurrentYear] = useState(2022);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <div className="h-36 w-ful footer bg-gray-50 ">
       <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
@@ -14,7 +20,7 @@ export const Footer = () => {
         </div>
         <div>
           <p>
-            &copy;&nbsp;2022 - {new Date().getFullYear()}
+            &copy;&nbsp;2022 - {currentYear}
             <span>&nbsp;Mingjian Wen </span>
           </p>
           <div className="flex flex-row gap-2">
