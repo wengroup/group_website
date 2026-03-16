@@ -63,12 +63,7 @@ module.exports = {
     //     singleTypes: [`hero`, `about`, `PI`],
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        // Add any options here
-      },
-    },
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {

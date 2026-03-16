@@ -1,6 +1,5 @@
 import React from "react";
-import { Card } from "@material-ui/core";
-import { Avatar, CardContent, CardHeader, Typography } from "@material-ui/core";
+import { Card, Avatar, CardContent, CardHeader, Typography } from "@mui/material";
 import { Link } from "gatsby";
 
 function randomColor() {

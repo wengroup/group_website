@@ -1,11 +1,9 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import Layout from "../../component/Layout";
 import { useStaticQuery, graphql } from "gatsby";
-import { convertMarkdownToPublications } from "../../utils/convertMDToArray";
 const query = graphql`
   {
-    allReference(sort: { fields: year, order: DESC }) {
+    allReference(sort: {year: DESC}) {
       edges {
         node {
           key

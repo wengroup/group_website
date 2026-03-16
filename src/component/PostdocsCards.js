@@ -7,7 +7,7 @@ const query = graphql`
       filter: {
         fileAbsolutePath: { regex: "/content_data/people/postdocs/.*/" }
       }
-      sort: { fields: frontmatter___date, order: ASC }
+      sort: {frontmatter: {date: ASC}}
     ) {
       nodes {
         frontmatter {

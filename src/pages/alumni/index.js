@@ -1,6 +1,4 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import BlogCard from "../../component/BlogCard";
 import Layout from "../../component/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import PeopleCardTest from "../../component/PeopleCard";
@@ -8,7 +6,7 @@ const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/people/alumni/.*/" } }
-      sort: { order: ASC, fields: frontmatter___date }
+      sort: {frontmatter: {date: ASC}}
     ) {
       nodes {
         frontmatter {

@@ -52,7 +52,7 @@ export const query = graphql`
     }
     codeData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/codes/.*/" } }
-      sort: { fields: fileAbsolutePath, order: ASC }
+      sort: {fileAbsolutePath: ASC}
     ) {
       nodes {
         id
@@ -66,7 +66,7 @@ export const query = graphql`
     }
     researchData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/research/.*/" } }
-      sort: { fields: fileAbsolutePath, order: ASC }
+      sort: {fileAbsolutePath: ASC}
     ) {
       nodes {
         frontmatter {
@@ -79,7 +79,7 @@ export const query = graphql`
     }
     positionData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/position/.*/" } }
-      sort: { fields: fileAbsolutePath, order: ASC }
+      sort: {fileAbsolutePath: ASC}
     ) {
       nodes {
         id
