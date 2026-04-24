@@ -1,5 +1,5 @@
 # April 24, 2026
-Our paper, in collaboration with Prof. Yue's research group, on developing mesoporous materials for sulfur batteries appears on _Angewandte Chemie_. https://doi.org/10.1038/10.1002/anie.9899225
+Our paper, in collaboration with Prof. Yue's research group, on developing mesoporous materials for sulfur batteries appears on _Angewandte Chemie_. https://doi.org/10.1002/anie.9899225
 
 # August 25, 2025
 The fall semester begins, and we welcome a new cohort of PhD, MS, and undergraduate students to the group!
