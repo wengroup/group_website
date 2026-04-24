@@ -1,11 +1,11 @@
 # April 24, 2026
-Our paper, in collaboration with Prof. Yue's research group, on developing mesoporous materials for sulfur batteries appears on _Angewandte Chemie_. https://doi.org/10.1002/anie.9899225
+Our paper on developing mesoporous materials for sulfur batteries, a collaboration with Prof. Yue's group, appears in _Angewandte Chemie_. https://doi.org/10.1002/anie.9899225
 
 # August 25, 2025
 The fall semester begins, and we welcome a new cohort of PhD, MS, and undergraduate students to the group!
 
 # May 9, 2025
-Our paper on building machine learning interatomic potentials using Cartesian atomic moment appears on _npj Computational Materials_. https://doi.org/10.1038/s41524-025-01623-4
+Our paper on building machine learning interatomic potentials using Cartesian atomic moment appears in _npj Computational Materials_. https://doi.org/10.1038/s41524-025-01623-4
 
 # March 1, 2025
 Mingjian joins the University of Electronic Science and Technology of China!
