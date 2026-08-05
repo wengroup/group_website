@@ -1,17 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { SubtitleIcon } from "./SubtitleIcon";
-import { SubtitleIconSvg } from "./SubtitleIconSvg";
 import { Link } from "gatsby";
 const query = graphql`
   {
-    subTitle: file(name: { eq: "publication" }) {
-      childrenImageSharp {
-        gatsbyImageData
-      }
-      extension
-      publicURL
-    }
     google: file(name: { eq: "Googlescholar" }) {
       childrenImageSharp {
         gatsbyImageData
@@ -42,13 +33,6 @@ export const Publication = () => {
   return (
     <div className="mt-20 bg-gray-50 pb-20" id="publications">
       <h2 className="text-center pt-20 pb-20">Publications</h2>
-      {/* <div className="flex flex-row justify-center mb-10">
-        {data.subTitle.childrenImageSharp == [] ? (
-          <SubtitleIcon icon={data.subTitle.childrenImageSharp} smaller />
-        ) : (
-          <SubtitleIconSvg icon={data.subTitle.publicURL} smaller />
-        )}
-      </div> */}
       <div className="flex gap-6 justify-center text-lg w-max mx-auto">
         <a
           href="https://scholar.google.com/citations?user=RXLH5k4AAAAJ&hl=en"
@@ -79,12 +63,11 @@ export const Publication = () => {
         </a>
       </div>
 
-      <p className="w-full text-center pt-20 text-2xl font-medium text-gray-500">
-        {/* <a href="">Full publication list...</a> */}
-        <Link to="/publications">
-          <p className="hover:underline">Full publication list...</p>
+      <div className="w-full text-center pt-20 text-2xl font-medium text-gray-500">
+        <Link to="/publications" className="hover:underline">
+          Full publication list...
         </Link>
-      </p>
+      </div>
     </div>
   );
 };

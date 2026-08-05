@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { NavData } from "../data/nav-data";
 import { FiMenu } from "react-icons/fi";
 import { CSSTransition } from "react-transition-group";

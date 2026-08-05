@@ -27,6 +27,7 @@ const PeopleCardTest = ({ people, img, pi }) => {
                     image={p.childImageSharp.gatsbyImageData}
                     alt={frontmatter.name}
                     className="h-32 w-32 headshot sm:mr-4 "
+                    key={p.relativePath}
                   />
                 );
               } else {
@@ -48,19 +49,16 @@ const PeopleCardTest = ({ people, img, pi }) => {
 
             {pi && (
               <p className="markdown">
-                <a href={data.file.publicURL} target="_blank">
+                <a href={data.file.publicURL} target="_blank" rel="noreferrer">
                   CV
                 </a>
               </p>
             )}
           </div>
         </div>
-        <p className="text-sm mt-5 ">
-          <ReactMarkdown
-            children={frontmatter.description}
-            className="markdown text-lg"
-          />
-        </p>
+        <div className="markdown text-lg mt-5">
+          <ReactMarkdown>{frontmatter.description}</ReactMarkdown>
+        </div>
         {/* <p className="text-sm mt-5">{description}</p> */}
       </div>
     </>

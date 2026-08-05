@@ -1,8 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Publication } from "./Publication";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { useEffect, useState } from "react";
 
 const query = graphql`
   {
@@ -14,40 +12,20 @@ const query = graphql`
         html
       }
     }
-    headshot: file(name: { eq: "hero" }) {
-      childrenImageSharp {
-        gatsbyImageData
-      }
-      extension
-      publicURL
-    }
-
     hero: file(name: { eq: "siguniang" }) {
       childrenImageSharp {
         gatsbyImageData
       }
-      extension
-      publicURL
-    }
-
-    file(extension: { eq: "pdf" }) {
-      publicURL
-      relativePath
     }
   }
 `;
 
 export const Aboutme = () => {
   const data = useStaticQuery(query);
-  const [zoomed, setZoomed] = useState(false);
 
   const {
     allMarkdownRemark: { nodes: about },
   } = data;
-  useEffect(() => {
-    setZoomed(true); // 组件加载后触发放大效果
-  }, []);
-
   return (
     <div className="w-full ">
       {/* 背景图片 - 调整了移动端的显示方式 */}

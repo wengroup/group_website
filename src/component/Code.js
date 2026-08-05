@@ -1,39 +1,15 @@
 import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
-import { GrDocument } from "react-icons/gr";
 import { Link } from "gatsby";
-import { SubtitleIcon } from "./SubtitleIcon";
-import { useStaticQuery, graphql } from "gatsby";
-import { SubtitleIconSvg } from "./SubtitleIconSvg";
 import ReactMarkdown from "react-markdown";
-const query = graphql`
-  {
-    file(name: { eq: "code" }) {
-      childrenImageSharp {
-        gatsbyImageData
-      }
-      extension
-      publicURL
-    }
-  }
-`;
 
 export const Code = ({ codes, showLink, showGrid }) => {
-  const data = useStaticQuery(query);
-
   return (
     <div id="codes" className=" mt-20  bg-gray-50 pt-20 pb-20">
       <div className=" flex justify-center items-center flex-col ">
         <h2 className="text-center pb-20">
           {showLink ? <Link to="Codes">Codes</Link> : "Codes"}
         </h2>
-        {/* <div className="flex flex-row justify-center pb-6 mb-10">
-        {data.file.childrenImageSharp == [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} />
-        ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} />
-        )}
-      </div> */}
         <ul
           className={`${
             showGrid
@@ -49,12 +25,9 @@ export const Code = ({ codes, showLink, showGrid }) => {
               shadow-[0_4px_20px_-2px_rgba(124,58,237,0.1)]  "
               >
                 <p className="subTitle">{item.frontmatter.title}</p>
-                <p>
-                  <ReactMarkdown
-                    children={item.frontmatter.description}
-                    className="markdown text-xl"
-                  />
-                </p>
+                <div className="markdown text-xl">
+                  <ReactMarkdown>{item.frontmatter.description}</ReactMarkdown>
+                </div>
                 {/* <p>{item.content}</p> */}
 
                 <a

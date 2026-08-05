@@ -2,6 +2,19 @@
 
 Source code of the Wen Group Website.
 
+## Production URL
+
+The build uses `https://wengroup.github.io` by default for canonical and social
+metadata. Set `SITE_URL` when building a copy for a custom domain:
+
+```shell
+SITE_URL=https://www.example.com npm run build
+```
+
+`SITE_URL` is baked into the generated HTML at build time, so a build is only
+valid for the domain it was built for. The GitHub Actions workflow does not set
+it and therefore always publishes the `wengroup.github.io` build.
+
 ## Add your profile
 
 If you've just joined the group, follow the below steps to add your profile.

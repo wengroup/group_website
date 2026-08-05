@@ -4,7 +4,14 @@
 
 @layer base {
   html {
-    font-family: "Open Sans", sans-serif;
+    font-family:
+      "Open Sans",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.8);
     line-height: 1.65;
@@ -24,18 +31,24 @@
     /* font-family: source sans pro, sans-serif; */
     /* font-weight: 500; */
     font-size: 1.2em;
-     max-width: 65rem;
+    max-width: 65rem;
+  }
+  .about a {
+    cursor: pointer;
+  }
+  .about a:hover {
+    text-decoration: underline;
   }
   .page {
     min-height: calc(100vh - 8rem);
   }
 
   h1 {
-    font-family: "source sans pro", sans-serif;
+    font-family: "Source Sans Pro", "Open Sans", sans-serif;
     color: #d89c60;
   }
   h2 {
-    font-family: "source sans pro", sans-serif;
+    font-family: "Source Sans Pro", "Open Sans", sans-serif;
     font-size: 2.5em;
     font-weight: bold;
     letter-spacing: 0.1rem;
@@ -52,7 +65,6 @@
     font-size: 1.5em;
     text-indent: 0;
     color: #151515;
-    /* font-family: "Oswald", sans-serif; */
     font-weight: 500;
   }
   .hero-title {
@@ -61,12 +73,12 @@
     color: #151515;
   }
   .hero-subtitle {
-    font-family: "Roboto", sans-serif;
+    font-family: inherit;
     font-size: 1.2em;
     color: #151515;
   }
   .footer {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", "Open Sans", sans-serif;
     font-weight: 200;
     font-size: 0.9em;
   }
@@ -140,7 +152,7 @@
     margin: 0 auto;
   }
   .mk p {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", "Open Sans", sans-serif;
     font-size: 1em;
     /* font-weight: 300; */
   }
@@ -160,11 +172,14 @@
   .markdown a {
     color: #041291;
     /* font-weight: 600; */
-    font-family: Open Sans;
+    font-family: "Open Sans", sans-serif;
     font-size: 0.9em;
   }
   .markdown a:hover {
     text-decoration: underline;
+  }
+  .opening-description strong {
+    font-weight: 600;
   }
   .markdown img {
     padding-top: 1rem;

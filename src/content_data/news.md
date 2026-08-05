@@ -1,6 +1,9 @@
 # August 5, 2026
-Our paper on `guided synthesis of EMT zeolites by machine learning` appears in
+Our paper on **guided synthesis of EMT zeolites by machine learning** appears in
 _Physical Review Materials_. https://doi.org/10.1103/v2yp-ylxm
+
+# July 15, 2026
+Welcome Yuliang Guo to the group as a postdoc!
 
 # April 24, 2026
 Our paper on developing mesoporous materials for sulfur batteries, a collaboration with Prof. Yue's group, appears in _Angewandte Chemie_. https://doi.org/10.1002/anie.9899225

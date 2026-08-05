@@ -1,27 +1,24 @@
 import React from "react";
-// import { GatsbyImage } from "gatsby-plugin-image"
-import { Link } from "gatsby";
-import { SubtitleIcon } from "./SubtitleIcon";
-import { SubtitleIconSvg } from "./SubtitleIconSvg";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import ResearchCard from "./ResearchCard";
 
+// `sizes` mirrors how ResearchCard lays the image out (`w-2/3` of the page
+// container). Keep the two in sync: if the card width changes, recompute this
+// or the browser will pick the wrong candidate from the srcset.
 const query = graphql`
   {
-    file(name: { eq: "research" }) {
-      # childrenImageSharp {
-      #   gatsbyImageData
-      # }
-      extension
-      publicURL
-    }
     allFile(filter: { relativeDirectory: { eq: "research/img" } }) {
       nodes {
         relativePath
-        extension
-        publicURL
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(
+            width: 1500
+            quality: 90
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+            sizes: "(min-width: 1280px) 608px, (min-width: 640px) calc(53.33vw - 75px), calc(66.67vw - 75px)"
+          )
         }
       }
     }
@@ -45,13 +42,6 @@ export const Research = ({ researches, showLink }) => {
       <h2 className="text-center pb-20">
         {showLink ? <Link to="Researches">Research</Link> : "Research"}
       </h2>
-      {/* <div className="flex flex-row justify-center mb-10">
-        {data.file.childrenImageSharp == [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} />
-        ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} />
-        )}
-      </div> */}
       <ul className="grid gap-20">
         {researches.map((item) => {
           return <ResearchCard item={item} key={item.id} imgs={imgs} />;

@@ -9,8 +9,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Publishing uses the SSH deploy key, not GITHUB_TOKEN, so read access suffices.
     permissions:
-      contents: write
+      contents: read
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -23,7 +24,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci
 
       - name: Build
         run: npm run build

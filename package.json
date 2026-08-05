@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "wengroup-website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Source for the Wen Group website",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -12,19 +12,14 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public --repo git@github.com:wengroup/wengroup.github.io.git -b main"
+    "deploy": "npm run build && gh-pages -d public --repo git@github.com:wengroup/wengroup.github.io.git -b main"
   },
   "dependencies": {
-    "@emotion/babel-plugin": "^11.13.5",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.11",
     "ajv": "^8.11.0",
     "ajv-keywords": "^5.1.0",
     "autoprefixer": "^10.4.17",
     "gatsby": "^5.16.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
-    "gatsby-plugin-emotion": "^8.16.0",
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-postcss": "^6.16.0",
     "gatsby-plugin-react-helmet": "^6.16.0",
@@ -49,8 +44,7 @@
     "react-masonry-css": "^1.0.16",
     "react-transition-group": "^4.4.5",
     "remark-gfm": "^4.0.0",
-    "tailwindcss": "^3.4.1",
-    "turndown": "^7.1.2"
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
@@ -59,9 +53,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/wengroup/group_website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/wengroup/group_website/issues"
   }
 }

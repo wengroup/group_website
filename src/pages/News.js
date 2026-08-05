@@ -2,13 +2,13 @@ import React from "react";
 import Layout from "../component/Layout";
 import { graphql } from "gatsby";
 import { New } from "../component/New";
-import { convertHtmlToArray } from "../utils/convertHtmlToArray";
+import { convertNewsMarkdownToArray } from "../utils/convertNewsMarkdownToArray";
 
 const News = ({ data }) => {
   const {
     allMarkdownRemark: { nodes: news },
   } = data;
-  const dataArray = convertHtmlToArray(news[0].html);
+  const dataArray = convertNewsMarkdownToArray(news[0].rawMarkdownBody);
   return (
     <Layout>
       <New news={dataArray} showGrid />
@@ -22,7 +22,7 @@ export const query = graphql`
     ) {
       nodes {
         id
-        html
+        rawMarkdownBody
       }
     }
   }

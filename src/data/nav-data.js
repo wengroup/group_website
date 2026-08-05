@@ -1,6 +1,5 @@
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React from "react";
-import { Link } from "gatsby";
 
 export const navData = [
   "news",

@@ -4,11 +4,22 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const siteUrl = process.env.SITE_URL || "https://wengroup.github.io";
+
+// Editor scratch files that land inside the sourced content directories.
+// Without this, an open vim buffer leaves a `.foo.md.swp` that gets sourced as a
+// File node and fails the SSR build with a bare `ERROR UNKNOWN`.
+// `.DS_Store` and `*.un~` are already in the plugin's default ignore list.
+const sourceIgnore = [`**/*.sw[a-p]`, `**/*~`, `**/.claude/**`, `**/.git/**`];
+
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is a WebDev portfolio site",
-    author: "Min He",
+    title: "文明健课题组 - 电子科大 ｜ Wen Group, UESTC",
+    description:
+      "Mingjian Wen Research Group at UESTC, focusing on AI for Science, " +
+      "materials genome engineering, and energy storage systems.",
+    author: "Mingjian Wen Group",
+    siteUrl,
   },
   flags: {
     DEV_SSR: true,
@@ -20,7 +31,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-anchor-links`,
-    `gatsby-plugin-postcss`,
 
     // {
     //   resolve: `gatsby-source-filesystem`,
@@ -34,6 +44,7 @@ module.exports = {
       options: {
         name: `icons`,
         path: `${__dirname}/src/icon/`,
+        ignore: sourceIgnore,
       },
     },
 
@@ -42,9 +53,34 @@ module.exports = {
       options: {
         name: `content_data`,
         path: `${__dirname}/src/content_data/`,
+        ignore: sourceIgnore,
       },
     },
     `gatsby-transformer-bibtex`,
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        // Every variant here costs a font file on first paint, so keep the list
+        // to the weights actually used. Open Sans 300 backs `font-light`,
+        // Source Sans Pro 200 backs `.footer`.
+        fonts: {
+          google: [
+            {
+              family: "Open Sans",
+              variants: ["300", "400", "500", "600", "700"],
+            },
+            {
+              family: "Source Sans Pro",
+              variants: ["200", "400", "700"],
+            },
+          ],
+        },
+        usePreload: false,
+        usePreconnect: false,
+        formats: ["woff2"],
+        crossorigin: "anonymous",
+      },
+    },
     // {
     //   resolve: `gatsby-source-strapi`,
     //   options: {
@@ -63,27 +99,6 @@ module.exports = {
     //     singleTypes: [`hero`, `about`, `PI`],
     //   },
     // },
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            { family: "Roboto", variants: ["300", "400", "500", "600", "700"] },
-            {
-              family: "Open Sans",
-              variants: ["300", "400", "500", "600", "700"],
-            },
-            { family: "Oswald", variants: ["200", "400"] },
-            { family: "Source Sans Pro", variants: ["200", "300", "700"] },
-          ],
-        },
-        usePreload: true,
-        usePreconnect: true,
-        formats: ["woff2", "woff"],
-        crossorigin: "anonymous",
-      },
-    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

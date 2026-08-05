@@ -1,5 +1,4 @@
 import React from "react";
-import { Header } from "./Hero";
 import { Footer } from "./Footer";
 import { Nav } from "./Nav";
 
@@ -11,7 +10,6 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Nav />
-      {/* <Header /> */}
       <div className=" mx-auto page">{children}</div>
       <div>
         <Footer />

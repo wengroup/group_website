@@ -61,6 +61,10 @@ public
 # Mac files
 .DS_Store
 
+# Editor scratch files
+*.sw[a-p]
+*~
+
 # Yarn
 yarn-error.log
 .pnp/

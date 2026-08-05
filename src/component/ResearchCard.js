@@ -8,19 +8,20 @@ const ResearchCard = ({ item, imgs }) => {
         {item.frontmatter.title}
       </p>
 
-      <p className="pb-4 text-lg">
+      <div className="pb-4 text-lg">
         <div dangerouslySetInnerHTML={{ __html: item.html }} />
-      </p>
-      <div className="">
+      </div>
+      <div className="flex justify-center">
         {imgs.map((p) => {
           if (p.relativePath === item.frontmatter.img) {
             return (
-              // <GatsbyImage
-              //   image={p.childImageSharp.gatsbyImageData}
-              //   alt={item.frontmatter.title}
-              //   className="w-1/2 mb-4"
-              // />
-              <img src={p.publicURL} className=" w-2/3 mb-4 mx-auto"></img>
+              <GatsbyImage
+                image={p.childImageSharp.gatsbyImageData}
+                alt={item.frontmatter.title}
+                className="w-2/3 mb-4 mx-auto"
+                loading="lazy"
+                key={p.relativePath}
+              />
             );
           } else {
             return null;

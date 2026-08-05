@@ -8,7 +8,7 @@ import { graphql } from "gatsby";
 import PeopleCards from "../component/PeopleCards";
 import Seo from "../component/SEO";
 import { Position } from "../component/Position";
-import { convertHtmlToArray } from "../utils/convertHtmlToArray";
+import { convertNewsMarkdownToArray } from "../utils/convertNewsMarkdownToArray";
 import { Publication } from "../component/Publication";
 
 const Home = ({ data }) => {
@@ -24,7 +24,7 @@ const Home = ({ data }) => {
   const newsData = data.newsData.nodes;
   const codeData = data.codeData.nodes;
   const positionData = data.positionData.nodes;
-  const newsArray = convertHtmlToArray(newsData[0].html);
+  const newsArray = convertNewsMarkdownToArray(newsData[0].rawMarkdownBody);
   return (
     <Layout>
       <Seo />
@@ -47,12 +47,12 @@ export const query = graphql`
     ) {
       nodes {
         id
-        html
+        rawMarkdownBody
       }
     }
     codeData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/codes/.*/" } }
-      sort: {fileAbsolutePath: ASC}
+      sort: { fileAbsolutePath: ASC }
     ) {
       nodes {
         id
@@ -66,7 +66,7 @@ export const query = graphql`
     }
     researchData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/research/.*/" } }
-      sort: {fileAbsolutePath: ASC}
+      sort: { fileAbsolutePath: ASC }
     ) {
       nodes {
         frontmatter {
@@ -79,7 +79,7 @@ export const query = graphql`
     }
     positionData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/position/.*/" } }
-      sort: {fileAbsolutePath: ASC}
+      sort: { fileAbsolutePath: ASC }
     ) {
       nodes {
         id
