@@ -53,7 +53,7 @@ export const Nav = () => {
         timeout={300}
         unmountOnExit={true}
         className={
-          " fixed bg-gray-200 shadow-inner w-full z-40 sm:hidden pt-4 rounded-md"
+          "fixed top-16 left-0 bg-gray-200 shadow-inner w-full z-40 sm:hidden pt-4 rounded-md"
         }
       >
         <ul>
