@@ -1,5 +1,5 @@
 ---
-name: Yuliang Guo
+name: Yuliang Guo (郭育良)
 Email: yuliangguo@uestc.edu.cn
 photo: people/postdocs/photo/Yuliang_Guo.png
 date: 2026-07-15
