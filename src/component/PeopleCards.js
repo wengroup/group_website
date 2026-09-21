@@ -1,5 +1,5 @@
 import React from "react";
-import GraduatesCards from "./GraduatesCards";
+import PhDCards from "./PhDCards";
 import PiCards from "./PiCards";
 import PostdocsCards from "./PostdocsCards";
 import UndergraduatesCards from "./UndergraduatesCards";
@@ -13,7 +13,7 @@ const PeopleCards = () => {
       <div className="flex flex-col gap-16">
         <PiCards />
         <PostdocsCards />
-        <GraduatesCards />
+        <PhDCards />
         <MasterCards />
         <UndergraduatesCards />
 

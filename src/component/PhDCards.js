@@ -32,7 +32,7 @@ const query = graphql`
   }
 `;
 
-const GraduatesCards = () => {
+const PhDCards = () => {
   const data = useStaticQuery(query);
   const {
     allMarkdownRemark: { nodes: phd },
@@ -43,7 +43,7 @@ const GraduatesCards = () => {
       <div className="flex justify-center items-center">
         <div className=" w-3/4">
           <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-            Ph.D.
+            Ph.D. Students
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
             {phd.map((p) => {
@@ -61,4 +61,4 @@ const GraduatesCards = () => {
   else return null;
 };
 
-export default GraduatesCards;
+export default PhDCards;
