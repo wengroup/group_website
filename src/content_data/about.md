@@ -2,7 +2,7 @@ Welcome to the **Wen Group** at the University of Electronic Science and Technol
 
 &nbsp;
 
-We push the boundaries of _artificial intelligence_ and _data-driven computational methods_ to innovate discovery in materials and chemical sciences.
+We push the boundaries of _artificial intelligence_ and _data-driven computational methods_ to power discovery in the physical and materials sciences.
 
 &nbsp;
 
