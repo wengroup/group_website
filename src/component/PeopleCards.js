@@ -10,7 +10,7 @@ const PeopleCards = () => {
   return (
     <div id="people" className="bg-gray-50">
       <h2 className="text-center mb-20 pt-20">People</h2>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-16">
         <PiCards />
         <PostdocsCards />
         <GraduatesCards />
