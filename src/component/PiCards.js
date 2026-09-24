@@ -46,7 +46,7 @@ const PiCards = () => {
           <h2 className="text-center sm:text-left people-title sm:pl-11 ">
             Principal Investigator
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-28 p-11 pt-5">
             {PI.map((p) => {
               return (
                 <div key={p.id}>
