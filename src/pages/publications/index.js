@@ -9,6 +9,7 @@ const query = graphql`
           key
           title
           journal
+          booktitle
           file {
             id
             publicURL
@@ -78,7 +79,7 @@ const Publications = () => {
                         . {item.node.author}.{" "}
                       </span>
                       <span className="italic font-semibold">
-                        {item.node.journal}
+                        {item.node.journal || item.node.booktitle}
                       </span>
                       {item.node.volume && (
                         <span className="text-gray-700">
