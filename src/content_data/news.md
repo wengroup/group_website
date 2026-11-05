@@ -3,6 +3,9 @@ Our paper **Atomistic machine learning with irreducible Cartesian natural tensor
 has been published in _Nature Communications_. Congratulations to Qun and Boyu!
 https://doi.org/10.1038/s41467-026-77263-z
 
+# September 1, 2026
+Welcome a new cohort of graduate students, Mingxiang Zhang, Junfei Yang, and Ran Zhang, to the group!
+
 # August 5, 2026
 Our paper on **guided synthesis of EMT zeolites by machine learning** appears in
 _Physical Review Materials_. https://doi.org/10.1103/v2yp-ylxm
