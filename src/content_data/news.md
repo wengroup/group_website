@@ -1,3 +1,8 @@
+# November 17, 2026
+Our paper **Reusable operators for irreducible Cartesian tensor decomposition and coupling**
+is published in _J. Chem. Phys._ https://doi.org/10.1063/5.0359423
+A reference implementation, [natto](https://github.com/wengroup/natto), is available.
+
 # September 20, 2026
 Our paper **Atomistic machine learning with irreducible Cartesian natural tensors**
 has been published in _Nature Communications_. Congratulations to Qun and Boyu!
