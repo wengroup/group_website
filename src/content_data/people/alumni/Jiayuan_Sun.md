@@ -3,6 +3,7 @@ name: Jiayuan Sun (孙嘉远)
 Email: 2024270902013@std.uestc.edu.cn
 photo: people/alumni/photo/Jiayuan_Sun.jpg
 date: 2025-09-05
+alumniOrder: 5
 description: Jiayuan is a sophomore interested in interdisciplinary applications of AI in scientific research. He hopes to gain practical experience and contribute to the development of relevant research projects.
 ---
 

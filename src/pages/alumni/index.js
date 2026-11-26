@@ -6,7 +6,7 @@ const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/people/alumni/.*/" } }
-      sort: {frontmatter: {date: ASC}}
+      sort: { frontmatter: { alumniOrder: ASC } }
     ) {
       nodes {
         frontmatter {
